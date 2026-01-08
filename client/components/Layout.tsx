@@ -20,27 +20,32 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Blue Header Bar */}
-      <div className="bg-blue-600 text-white text-sm py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div className="text-center sm:text-left">
-              Soul Link is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities.{" "}
-              <Link to="/certificates" className="font-semibold underline hover:no-underline">
-                click here
-              </Link>{" "}
-              to visit all certificates
+      {/* Top Blue Header Bar with Scrolling Text */}
+      <div className="bg-blue-600 text-white py-2 overflow-hidden">
+        <div className="flex items-center gap-6">
+          {/* Scrolling Text */}
+          <div className="scroll-text-container flex-1 min-w-0">
+            <div className="scroll-text inline-block">
+              <span>
+                Soul Link is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities.{" "}
+                <Link to="/certificates" className="font-semibold underline hover:no-underline">
+                  click here
+                </Link>{" "}
+                to visit all certificates
+              </span>
             </div>
-            <div className="flex gap-6 text-xs sm:text-sm">
-              <a href="tel:+911140538140" className="flex items-center gap-1 hover:opacity-90 transition-opacity">
-                <Phone className="w-4 h-4" />
-                011-40538140
-              </a>
-              <a href="mailto:info@ngo.org" className="flex items-center gap-1 hover:opacity-90 transition-opacity">
-                <Mail className="w-4 h-4" />
-                info@ngo.org
-              </a>
-            </div>
+          </div>
+
+          {/* Contact Info - Static on desktop, hidden on mobile */}
+          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-blue-500">
+            <a href="tel:+911140538140" className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap">
+              <Phone className="w-4 h-4" />
+              011-40538140
+            </a>
+            <a href="mailto:info@ngo.org" className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap">
+              <Mail className="w-4 h-4" />
+              info@ngo.org
+            </a>
           </div>
         </div>
       </div>
