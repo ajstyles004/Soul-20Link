@@ -222,7 +222,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Our Story
                   </Link>
@@ -230,7 +230,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Mission & Vision
                   </Link>
@@ -238,13 +238,13 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/team"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-red-500 transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     Careers
                   </a>
                 </li>
@@ -258,7 +258,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/news"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Latest News
                   </Link>
@@ -266,18 +266,21 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/gallery"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-red-500 transition-colors">
-                    Privacy Policy
-                  </a>
+                  <Link
+                    to="/certificates"
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    Certificates
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-red-500 transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     Terms of Service
                   </a>
                 </li>
@@ -291,7 +294,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <a
                     href="tel:+911140538140"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     011-40538140
                   </a>
@@ -299,7 +302,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <a
                     href="mailto:info@ngo.org"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     info@ngo.org
                   </a>
@@ -307,7 +310,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/contact"
-                    className="hover:text-red-500 transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Contact Us
                   </Link>
