@@ -80,13 +80,6 @@ export default function Layout({ children }: LayoutProps) {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/donate"
-                className="block mt-4 w-full text-center bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Donate Now
-              </Link>
             </nav>
           )}
         </div>
