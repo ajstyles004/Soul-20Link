@@ -141,16 +141,16 @@ export default function Layout({ children }: LayoutProps) {
       <main className="flex-grow">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* About */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-pink-500 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Healthcare Foundation</h3>
+                <h3 className="text-lg font-bold">बाल Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Providing mental health and healthcare services to underserved
@@ -159,7 +159,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-red-500 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -172,7 +172,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-red-500 transition-colors"
                   aria-label="Twitter"
                 >
                   <svg
@@ -185,7 +185,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-red-500 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -216,7 +216,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Our Story
                   </Link>
@@ -224,7 +224,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Mission & Vision
                   </Link>
@@ -232,13 +232,13 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/team"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-red-500 transition-colors">
                     Careers
                   </a>
                 </li>
@@ -252,7 +252,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/news"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Latest News
                   </Link>
@@ -260,18 +260,18 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/gallery"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-red-500 transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-red-500 transition-colors">
                     Terms of Service
                   </a>
                 </li>
@@ -284,16 +284,16 @@ export default function Layout({ children }: LayoutProps) {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a
-                    href="tel:+919876543210"
-                    className="hover:text-primary transition-colors"
+                    href="tel:+911140538140"
+                    className="hover:text-red-500 transition-colors"
                   >
-                    +91 98765 43210
+                    011-40538140
                   </a>
                 </li>
                 <li>
                   <a
                     href="mailto:info@ngo.org"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     info@ngo.org
                   </a>
@@ -301,7 +301,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/contact"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-red-500 transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -310,7 +310,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8">
+          <div className="border-t border-gray-700 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm text-gray-400">
               <div>
                 <p className="font-semibold text-white mb-1">
@@ -331,9 +331,9 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
               </div>
             </div>
-            <div className="text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+            <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
               <p>
-                &copy; 2024 Healthcare Foundation, Kolkata. All rights reserved.
+                &copy; 2024 बाल Foundation. All rights reserved.
                 | Mental Health & Healthcare Services
               </p>
             </div>
