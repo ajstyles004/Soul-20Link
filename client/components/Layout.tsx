@@ -136,7 +136,7 @@ export default function Layout({ children }: LayoutProps) {
           <MessageCircle className="w-7 h-7" />
         </a>
         <button
-          className="w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          className="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
           aria-label="Help"
         >
           <HelpCircle className="w-7 h-7" />
