@@ -318,9 +318,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-              <span className="text-teal-700">WHEN </span>
+              <span className="text-cyan-600">WHEN </span>
               <span className="text-gray-900">You Should </span>
-              <span className="text-pink-700">CONTACT US</span>
+              <span className="text-red-600">CONTACT US</span>
             </h2>
           </div>
 
@@ -344,7 +344,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-50 rounded border-l-4 border-teal-700"
+                className="p-6 bg-gray-50 rounded border-l-4 border-red-600"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded transition-colors"
+              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded transition-colors"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
