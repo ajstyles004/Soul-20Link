@@ -59,27 +59,27 @@ export default function Home() {
             {/* Text Content */}
             <div className="z-10">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
-                Healthcare Foundation, Kolkata
+                Welcome to Soul Link Foundation
               </h1>
-              <p className="text-lg text-gray-600 mb-2 font-semibold text-teal-700">
-                Partnering For Change
+              <p className="text-lg text-gray-600 mb-2 font-semibold text-blue-700">
+                Transforming Lives Through Mental Health & Wellness
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                We provide comprehensive mental health services, psychological
-                counseling, and healthcare interventions to underserved
-                communities across India. Our mission is to make quality mental
-                healthcare accessible to all.
+                Soul Link is dedicated to providing comprehensive mental health
+                services, psychological counseling, and healthcare interventions
+                to underserved communities across India. Our mission is to make
+                quality mental healthcare accessible to all.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link
                   to="/about"
-                  className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded transition-colors inline-flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded transition-colors inline-flex items-center gap-2"
                 >
                   Learn More <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="border-2 border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white font-semibold py-3 px-8 rounded transition-colors"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -137,8 +137,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-teal-700">What We </span>
-              <span className="text-pink-700">Do</span>
+              <span className="text-blue-600">What We </span>
+              <span className="text-blue-700">Do</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               We work in the field of mental health and healthcare, providing
@@ -157,15 +157,15 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 bg-pink-700 text-white">
+              <div className="p-8 bg-blue-600 text-white">
                 <h3 className="text-2xl font-bold mb-3">Mental Health</h3>
-                <p className="text-pink-100 mb-4">
+                <p className="text-blue-100 mb-4">
                   Comprehensive psychological counseling, therapy, and mental
                   health awareness programs for individuals and communities.
                 </p>
                 <Link
                   to="/news"
-                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-pink-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-blue-200 transition-colors"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -181,15 +181,15 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 bg-teal-700 text-white">
+              <div className="p-8 bg-blue-700 text-white">
                 <h3 className="text-2xl font-bold mb-3">Healthcare Services</h3>
-                <p className="text-teal-100 mb-4">
+                <p className="text-blue-100 mb-4">
                   Medical consultation, health awareness, and preventive care
                   programs for underserved populations.
                 </p>
                 <Link
                   to="/news"
-                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-teal-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-blue-200 transition-colors"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -250,9 +250,9 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="p-6 bg-white border-2 border-gray-100 rounded hover:border-teal-700 hover:shadow-lg transition-all group"
+                className="p-6 bg-white border-2 border-gray-100 rounded hover:border-blue-600 hover:shadow-lg transition-all group"
               >
-                <div className="text-teal-700 mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -266,11 +266,11 @@ export default function Home() {
       </section>
 
       {/* Impact & Statistics */}
-      <section className="bg-teal-700 py-16 md:py-24 text-white">
+      <section className="bg-blue-600 py-16 md:py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
-            <p className="text-teal-100 max-w-2xl mx-auto">
+            <p className="text-blue-100 max-w-2xl mx-auto">
               Making a measurable difference in mental health and healthcare
               access
             </p>
@@ -287,7 +287,7 @@ export default function Home() {
                 <div className="text-4xl md:text-5xl font-bold mb-2">
                   {stat.number}
                 </div>
-                <p className="text-teal-100 font-medium">{stat.label}</p>
+                <p className="text-blue-100 font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -318,7 +318,7 @@ export default function Home() {
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded transition-colors"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded transition-colors"
               >
                 Our Story <ArrowRight className="w-4 h-4" />
               </Link>
@@ -340,9 +340,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-              <span className="text-teal-700">WHEN </span>
+              <span className="text-blue-600">WHEN </span>
               <span className="text-gray-900">You Should </span>
-              <span className="text-pink-700">CONTACT US</span>
+              <span className="text-blue-700">CONTACT US</span>
             </h2>
           </div>
 
@@ -366,7 +366,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-50 rounded border-l-4 border-teal-700"
+                className="p-6 bg-gray-50 rounded border-l-4 border-blue-600"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
@@ -379,7 +379,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded transition-colors"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
@@ -431,7 +431,7 @@ export default function Home() {
       </section>
 
       {/* Donation Section at Bottom */}
-      <section className="bg-teal-700 py-16 md:py-24 text-white">
+      <section className="bg-blue-600 py-16 md:py-24 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Heart className="w-16 h-16" />
@@ -439,7 +439,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Support Our Mission
           </h2>
-          <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Your contribution helps us provide mental health services and
             healthcare to underserved communities. Every donation, regardless of
             size, makes a real difference.
@@ -448,20 +448,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <Link
               to="/donate"
-              className="bg-white text-teal-700 hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               <Heart className="w-5 h-5" />
               Make a Donation
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-teal-700 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               Get Involved <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <p className="mt-8 text-teal-100 text-sm">
+          <p className="mt-8 text-blue-100 text-sm">
             Your donation is secure and will be used transparently. We are a
             registered organization with all necessary legal clearances.
           </p>

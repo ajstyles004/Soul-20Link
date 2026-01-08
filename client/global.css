@@ -124,3 +124,28 @@
     white-space: pre;
   }
 }
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-text-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 15s linear infinite;
+  padding-right: 2rem;
+}
+
+.scroll-text:hover {
+  animation-play-state: paused;
+}

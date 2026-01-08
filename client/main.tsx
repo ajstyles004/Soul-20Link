@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import News from "./pages/News";
 import Gallery from "./pages/Gallery";
+import Certificates from "./pages/Certificates";
 import Donation from "./pages/Donation";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/news" element={<News />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/donate" element={<Donation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />

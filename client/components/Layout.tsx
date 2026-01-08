@@ -1,6 +1,15 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import {
+  Menu,
+  X,
+  Heart,
+  Search,
+  MessageCircle,
+  HelpCircle,
+  Phone,
+  Mail,
+} from "lucide-react";
 import { useState } from "react";
 
 interface LayoutProps {
@@ -11,64 +20,115 @@ export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Team", href: "/team" },
-    { label: "News", href: "/news" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+    { label: "What we do", href: "/news" },
+    { label: "Partnership", href: "/contact" },
+    { label: "Get Involved", href: "/donate" },
+    { label: "Resources", href: "/gallery" },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
+      {/* Top Blue Header Bar with Scrolling Text */}
+      <div className="bg-blue-600 text-white py-2 overflow-hidden">
+        <div className="flex items-center gap-6">
+          {/* Scrolling Text */}
+          <div className="scroll-text-container flex-1 min-w-0">
+            <div className="scroll-text inline-block">
+              <span>
+                Soul Link is registered under sections 12A & 80G of the Income
+                Tax Act, 1961 and CSR-1 registered under the Ministry of
+                Corporate Affairs for undertaking CSR activities.{" "}
+                <Link
+                  to="/certificates"
+                  className="font-semibold underline hover:no-underline"
+                >
+                  click here
+                </Link>{" "}
+                to visit all certificates
+              </span>
+            </div>
+          </div>
+
+          {/* Contact Info - Static on desktop, hidden on mobile */}
+          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-blue-500">
+            <a
+              href="tel:+911140538140"
+              className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              <Phone className="w-4 h-4" />
+              011-40538140
+            </a>
+            <a
+              href="mailto:info@ngo.org"
+              className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
+              <Mail className="w-4 h-4" />
+              info@ngo.org
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-md">
-                  <Heart className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div className="hidden sm:block">
-                  <div className="text-lg font-bold text-gray-900">
-                    Healthcare Foundation
+                  <div className="text-xl font-bold text-gray-900">
+                    Soul Link
                   </div>
-                  <div className="text-xs text-primary font-medium">
-                    Mental Health & Psychology
+                  <div className="text-xs text-gray-600 font-medium">
+                    Mental Health & Wellness
                   </div>
                 </div>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex gap-8">
+            <nav className="hidden md:flex gap-6 lg:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-gray-700 hover:text-primary font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            {/* Donate Button Removed - Now at bottom of homepage */}
+            {/* Right Section */}
+            <div className="flex items-center gap-3">
+              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <Search className="w-5 h-5 text-gray-700" />
+              </button>
+              <Link
+                to="/donate"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
+              >
+                Donate Now
+              </Link>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700" />
-              ) : (
-                <Menu className="w-6 h-6 text-gray-700" />
-              )}
-            </button>
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden p-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6 text-gray-700" />
+                ) : (
+                  <Menu className="w-6 h-6 text-gray-700" />
+                )}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -78,7 +138,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block py-2 text-gray-700 hover:text-primary font-medium transition-colors"
+                  className="block py-2 text-gray-700 hover:text-red-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -89,20 +149,39 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-40">
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle className="w-7 h-7" />
+        </a>
+        <button
+          className="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          aria-label="Help"
+        >
+          <HelpCircle className="w-7 h-7" />
+        </button>
+      </div>
+
       {/* Main Content */}
       <main className="flex-grow">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* About */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-pink-500 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Healthcare Foundation</h3>
+                <h3 className="text-lg font-bold">Soul Link Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Providing mental health and healthcare services to underserved
@@ -111,7 +190,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -124,7 +203,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
                   aria-label="Twitter"
                 >
                   <svg
@@ -137,7 +216,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -168,7 +247,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Our Story
                   </Link>
@@ -176,7 +255,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Mission & Vision
                   </Link>
@@ -184,13 +263,13 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/team"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     Careers
                   </a>
                 </li>
@@ -204,7 +283,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/news"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Latest News
                   </Link>
@@ -212,18 +291,21 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/gallery"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    Privacy Policy
-                  </a>
+                  <Link
+                    to="/certificates"
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    Certificates
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     Terms of Service
                   </a>
                 </li>
@@ -236,16 +318,16 @@ export default function Layout({ children }: LayoutProps) {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a
-                    href="tel:+919876543210"
-                    className="hover:text-primary transition-colors"
+                    href="tel:+911140538140"
+                    className="hover:text-blue-500 transition-colors"
                   >
-                    +91 98765 43210
+                    011-40538140
                   </a>
                 </li>
                 <li>
                   <a
                     href="mailto:info@ngo.org"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     info@ngo.org
                   </a>
@@ -253,7 +335,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/contact"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-blue-500 transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -262,7 +344,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8">
+          <div className="border-t border-gray-700 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm text-gray-400">
               <div>
                 <p className="font-semibold text-white mb-1">
@@ -283,10 +365,10 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
               </div>
             </div>
-            <div className="text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+            <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
               <p>
-                &copy; 2024 Healthcare Foundation, Kolkata. All rights reserved.
-                | Mental Health & Healthcare Services
+                &copy; 2024 Soul Link Foundation. All rights reserved. | Mental
+                Health & Healthcare Services
               </p>
             </div>
           </div>
