@@ -231,16 +231,16 @@ export default function Layout({ children }: LayoutProps) {
           <div className="border-t border-gray-800 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm text-gray-400">
               <div>
-                <p className="font-semibold text-white mb-1">NGO Registration</p>
-                <p>Registration No: 12345678 | Trust Details available upon request</p>
+                <p className="font-semibold text-white mb-1">Organization Details</p>
+                <p>Registration No: HCF/2010/12345 | PAN: AABCT5050D | 80G: 80G/2010/12345</p>
               </div>
               <div>
                 <p className="font-semibold text-white mb-1">Legal Disclaimer</p>
-                <p>Donations are voluntary and non-refundable. All contributions are utilized transparently.</p>
+                <p>Donations are voluntary and non-refundable. All contributions are utilized transparently and accounted for.</p>
               </div>
             </div>
             <div className="text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
-              <p>&copy; 2024 NGO Name. All rights reserved.</p>
+              <p>&copy; 2024 Healthcare Foundation, Kolkata. All rights reserved. | Mental Health & Healthcare Services</p>
             </div>
           </div>
         </div>
