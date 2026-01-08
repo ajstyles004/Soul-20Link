@@ -112,13 +112,13 @@ export default function Layout({ children }: LayoutProps) {
             {/* About */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-pink-500 rounded-full flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">NGO Name</h3>
+                <h3 className="text-lg font-bold">Healthcare Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Making a positive impact in communities across India.
+                Providing mental health and healthcare services to underserved communities across India.
               </p>
               <div className="flex gap-4">
                 <a
