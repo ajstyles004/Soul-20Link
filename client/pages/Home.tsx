@@ -431,7 +431,7 @@ export default function Home() {
       </section>
 
       {/* Donation Section at Bottom */}
-      <section className="bg-red-600 py-16 md:py-24 text-white">
+      <section className="bg-blue-600 py-16 md:py-24 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Heart className="w-16 h-16" />
@@ -439,7 +439,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Support Our Mission
           </h2>
-          <p className="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Your contribution helps us provide mental health services and
             healthcare to underserved communities. Every donation, regardless of
             size, makes a real difference.
@@ -448,20 +448,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <Link
               to="/donate"
-              className="bg-white text-red-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               <Heart className="w-5 h-5" />
               Make a Donation
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               Get Involved <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <p className="mt-8 text-red-100 text-sm">
+          <p className="mt-8 text-blue-100 text-sm">
             Your donation is secure and will be used transparently. We are a
             registered organization with all necessary legal clearances.
           </p>
