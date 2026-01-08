@@ -20,11 +20,17 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Red Header Bar */}
-      <div className="bg-red-600 text-white text-sm py-2">
+      {/* Top Blue Header Bar */}
+      <div className="bg-blue-600 text-white text-sm py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div className="text-center sm:text-left">Ask here to save certificates</div>
+            <div className="text-center sm:text-left">
+              Soul Link is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities.{" "}
+              <Link to="/certificates" className="font-semibold underline hover:no-underline">
+                click here
+              </Link>{" "}
+              to visit all certificates
+            </div>
             <div className="flex gap-6 text-xs sm:text-sm">
               <a href="tel:+911140538140" className="flex items-center gap-1 hover:opacity-90 transition-opacity">
                 <Phone className="w-4 h-4" />
