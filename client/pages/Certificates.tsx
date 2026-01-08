@@ -66,7 +66,8 @@ export default function Certificates() {
           </div>
           <p className="text-blue-100 max-w-3xl">
             Soul Link Foundation is registered and certified under multiple
-            regulatory bodies to ensure transparency and trust in our operations.
+            regulatory bodies to ensure transparency and trust in our
+            operations.
           </p>
         </div>
       </section>
@@ -125,7 +126,9 @@ export default function Certificates() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Legal Compliance</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  Legal Compliance
+                </h4>
                 <p className="text-gray-600">
                   Soul Link is fully compliant with all applicable laws and
                   regulations. All our registrations are current and valid.
@@ -137,7 +140,8 @@ export default function Certificates() {
                 </h4>
                 <p className="text-gray-600">
                   We maintain transparent financial records and undergo regular
-                  audits to ensure accountability to our donors and beneficiaries.
+                  audits to ensure accountability to our donors and
+                  beneficiaries.
                 </p>
               </div>
               <div>

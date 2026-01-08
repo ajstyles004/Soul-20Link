@@ -65,10 +65,10 @@ export default function Home() {
                 Transforming Lives Through Mental Health & Wellness
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Soul Link is dedicated to providing comprehensive mental health services, psychological
-                counseling, and healthcare interventions to underserved
-                communities across India. Our mission is to make quality mental
-                healthcare accessible to all.
+                Soul Link is dedicated to providing comprehensive mental health
+                services, psychological counseling, and healthcare interventions
+                to underserved communities across India. Our mission is to make
+                quality mental healthcare accessible to all.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link

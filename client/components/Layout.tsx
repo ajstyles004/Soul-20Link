@@ -1,6 +1,15 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Heart, Search, MessageCircle, HelpCircle, Phone, Mail } from "lucide-react";
+import {
+  Menu,
+  X,
+  Heart,
+  Search,
+  MessageCircle,
+  HelpCircle,
+  Phone,
+  Mail,
+} from "lucide-react";
 import { useState } from "react";
 
 interface LayoutProps {
@@ -27,8 +36,13 @@ export default function Layout({ children }: LayoutProps) {
           <div className="scroll-text-container flex-1 min-w-0">
             <div className="scroll-text inline-block">
               <span>
-                Soul Link is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities.{" "}
-                <Link to="/certificates" className="font-semibold underline hover:no-underline">
+                Soul Link is registered under sections 12A & 80G of the Income
+                Tax Act, 1961 and CSR-1 registered under the Ministry of
+                Corporate Affairs for undertaking CSR activities.{" "}
+                <Link
+                  to="/certificates"
+                  className="font-semibold underline hover:no-underline"
+                >
                   click here
                 </Link>{" "}
                 to visit all certificates
@@ -38,11 +52,17 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Contact Info - Static on desktop, hidden on mobile */}
           <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-blue-500">
-            <a href="tel:+911140538140" className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap">
+            <a
+              href="tel:+911140538140"
+              className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
               <Phone className="w-4 h-4" />
               011-40538140
             </a>
-            <a href="mailto:info@ngo.org" className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap">
+            <a
+              href="mailto:info@ngo.org"
+              className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+            >
               <Mail className="w-4 h-4" />
               info@ngo.org
             </a>
@@ -347,8 +367,8 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
               <p>
-                &copy; 2024 Soul Link Foundation. All rights reserved.
-                | Mental Health & Healthcare Services
+                &copy; 2024 Soul Link Foundation. All rights reserved. | Mental
+                Health & Healthcare Services
               </p>
             </div>
           </div>
