@@ -342,7 +342,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
               <p>
-                &copy; 2024 बाल Foundation. All rights reserved.
+                &copy; 2024 Soul Link Foundation. All rights reserved.
                 | Mental Health & Healthcare Services
               </p>
             </div>
