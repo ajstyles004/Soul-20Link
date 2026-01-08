@@ -51,15 +51,7 @@ export default function Layout({ children }: LayoutProps) {
               ))}
             </nav>
 
-            {/* Donate Button */}
-            <div className="hidden md:block">
-              <Link
-                to="/donate"
-                className="bg-primary hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-              >
-                Donate Now
-              </Link>
-            </div>
+            {/* Donate Button Removed - Now at bottom of homepage */}
 
             {/* Mobile Menu Button */}
             <button
