@@ -52,12 +52,12 @@ export default function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
                   <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div className="hidden sm:block">
                   <div className="text-xl font-bold text-gray-900">
-                    बाल
+                    Soul Link
                   </div>
                   <div className="text-xs text-gray-600 font-medium">
                     Mental Health & Wellness
@@ -72,7 +72,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-gray-700 hover:text-red-600 font-medium transition-colors text-sm"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
@@ -86,7 +86,7 @@ export default function Layout({ children }: LayoutProps) {
               </button>
               <Link
                 to="/donate"
-                className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
               >
                 Donate Now
               </Link>
