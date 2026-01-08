@@ -21,16 +21,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 200 100% 50%;
+    --primary: 176 100% 42%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 174 86% 50%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 326 100% 54%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 200 100% 50%;
+    --accent: 176 100% 42%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,7 +38,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 200 100% 50%;
+    --ring: 176 100% 42%;
 
     --radius: 0.5rem;
 
@@ -46,7 +46,7 @@
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 200 100% 50%;
+    --sidebar-primary: 176 100% 42%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
@@ -58,13 +58,11 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* NGO specific colors */
-    --ngo-blue: 200 100% 50%;
-    --ngo-teal: 174 86% 50%;
-    --ngo-pink: 355 79% 65%;
-    --ngo-yellow: 44 95% 55%;
-    --ngo-orange: 15 93% 56%;
-    --ngo-purple: 270 74% 65%;
+    /* Healthcare-specific colors */
+    --health-teal: 176 100% 42%;
+    --health-pink: 326 100% 54%;
+    --health-light-teal: 179 97% 82%;
+    --health-light-pink: 326 100% 92%;
   }
 
   .dark {
