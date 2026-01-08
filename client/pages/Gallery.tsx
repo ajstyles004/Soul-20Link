@@ -10,81 +10,94 @@ export default function Gallery() {
       id: 1,
       category: "workshops",
       title: "Mental Health Awareness Workshop",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     },
     {
       id: 2,
       category: "events",
       title: "Community Counseling Session",
-      image: "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
     },
     {
       id: 3,
       category: "programs",
       title: "Healthcare Camp",
-      image: "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop",
     },
     {
       id: 4,
       category: "workshops",
       title: "Stress Management Training",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     },
     {
       id: 5,
       category: "events",
       title: "Team Meeting",
-      image: "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop",
     },
     {
       id: 6,
       category: "programs",
       title: "Group Therapy Session",
-      image: "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
     },
     {
       id: 7,
       category: "workshops",
       title: "Youth Mental Health Forum",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     },
     {
       id: 8,
       category: "events",
       title: "Annual Health Drive",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     },
     {
       id: 9,
       category: "programs",
       title: "School Mental Health Program",
-      image: "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop",
     },
     {
       id: 10,
       category: "workshops",
       title: "Professional Development",
-      image: "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop",
     },
     {
       id: 11,
       category: "events",
       title: "Community Outreach",
-      image: "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
     },
     {
       id: 12,
       category: "programs",
       title: "Rehabilitation Program",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     },
   ];
 
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const filteredImages = activeFilter === "all"
-    ? galleryImages
-    : galleryImages.filter((img) => img.category === activeFilter);
+  const filteredImages =
+    activeFilter === "all"
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === activeFilter);
 
   return (
     <Layout>
@@ -187,7 +200,9 @@ export default function Gallery() {
             Our Work in Action
           </h2>
           <p className="text-gray-600 text-lg">
-            Through these images, we showcase the impact of our programs and the strength of our community partnerships. Every photo represents a moment of change, growth, and hope.
+            Through these images, we showcase the impact of our programs and the
+            strength of our community partnerships. Every photo represents a
+            moment of change, growth, and hope.
           </p>
         </div>
       </section>

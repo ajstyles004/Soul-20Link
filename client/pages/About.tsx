@@ -24,13 +24,23 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Founded in 2010, Healthcare Foundation emerged from a simple vision: to make quality mental health and medical care accessible to everyone, regardless of their economic status. What started as a small counseling center has grown into a comprehensive healthcare organization.
+                Founded in 2010, Healthcare Foundation emerged from a simple
+                vision: to make quality mental health and medical care
+                accessible to everyone, regardless of their economic status.
+                What started as a small counseling center has grown into a
+                comprehensive healthcare organization.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Over the years, we've served more than 50,000 individuals and families, conducting thousands of counseling sessions and awareness programs across India. Our team of clinical psychologists, psychiatrists, and healthcare professionals works tirelessly to break stigma and provide compassionate care.
+                Over the years, we've served more than 50,000 individuals and
+                families, conducting thousands of counseling sessions and
+                awareness programs across India. Our team of clinical
+                psychologists, psychiatrists, and healthcare professionals works
+                tirelessly to break stigma and provide compassionate care.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Today, we continue our mission with renewed commitment, expanding our reach and developing innovative programs to meet the evolving mental health needs of our communities.
+                Today, we continue our mission with renewed commitment,
+                expanding our reach and developing innovative programs to meet
+                the evolving mental health needs of our communities.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
@@ -52,10 +62,16 @@ export default function About() {
             <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-primary">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="w-8 h-8 text-primary" />
-                <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Our Mission
+                </h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                To provide accessible, high-quality mental health and healthcare services to underserved communities across India. We are committed to promoting mental wellness, reducing stigma, and empowering individuals to lead healthier, more fulfilling lives through evidence-based interventions and compassionate care.
+                To provide accessible, high-quality mental health and healthcare
+                services to underserved communities across India. We are
+                committed to promoting mental wellness, reducing stigma, and
+                empowering individuals to lead healthier, more fulfilling lives
+                through evidence-based interventions and compassionate care.
               </p>
             </div>
 
@@ -66,7 +82,11 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                A society where mental health is valued equally with physical health, where every individual has access to quality psychological support and healthcare services, and where compassion, understanding, and science guide our path toward creating a healthier, more equitable world.
+                A society where mental health is valued equally with physical
+                health, where every individual has access to quality
+                psychological support and healthcare services, and where
+                compassion, understanding, and science guide our path toward
+                creating a healthier, more equitable world.
               </p>
             </div>
           </div>
@@ -84,22 +104,29 @@ export default function About() {
             {[
               {
                 title: "Compassion",
-                description: "We approach every individual with empathy and respect"
+                description:
+                  "We approach every individual with empathy and respect",
               },
               {
                 title: "Excellence",
-                description: "We strive for the highest standards in mental health care"
+                description:
+                  "We strive for the highest standards in mental health care",
               },
               {
                 title: "Integrity",
-                description: "We maintain ethical practices in all our operations"
+                description:
+                  "We maintain ethical practices in all our operations",
               },
               {
                 title: "Accessibility",
-                description: "We work to make healthcare available to all, regardless of background"
+                description:
+                  "We work to make healthcare available to all, regardless of background",
               },
             ].map((value, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded-lg text-center hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="p-6 bg-gray-50 rounded-lg text-center hover:shadow-lg transition-shadow"
+              >
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   {value.title}
                 </h3>
@@ -119,14 +146,22 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Registration Details</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Registration Details
+              </h3>
               <dl className="space-y-3">
                 <div>
-                  <dt className="font-semibold text-gray-700">Organization Name:</dt>
-                  <dd className="text-gray-600">Healthcare Foundation, Kolkata</dd>
+                  <dt className="font-semibold text-gray-700">
+                    Organization Name:
+                  </dt>
+                  <dd className="text-gray-600">
+                    Healthcare Foundation, Kolkata
+                  </dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-gray-700">Registration Number:</dt>
+                  <dt className="font-semibold text-gray-700">
+                    Registration Number:
+                  </dt>
                   <dd className="text-gray-600">HCF/2010/12345</dd>
                 </div>
                 <div>
@@ -141,7 +176,9 @@ export default function About() {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Trust Details</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Trust Details
+              </h3>
               <dl className="space-y-3">
                 <div>
                   <dt className="font-semibold text-gray-700">Founder:</dt>
@@ -152,12 +189,16 @@ export default function About() {
                   <dd className="text-gray-600">January 15, 2010</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-gray-700">Trustee Members:</dt>
+                  <dt className="font-semibold text-gray-700">
+                    Trustee Members:
+                  </dt>
                   <dd className="text-gray-600">7 members</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-gray-700">Contact:</dt>
-                  <dd className="text-gray-600">info@healthcarefoundation.org</dd>
+                  <dd className="text-gray-600">
+                    info@healthcarefoundation.org
+                  </dd>
                 </div>
               </dl>
             </div>
@@ -177,29 +218,33 @@ export default function About() {
               {
                 year: "2023",
                 title: "Best Mental Health Organization",
-                awarding_body: "India Healthcare Excellence Awards"
+                awarding_body: "India Healthcare Excellence Awards",
               },
               {
                 year: "2022",
                 title: "Community Impact Award",
-                awarding_body: "National NGO Council"
+                awarding_body: "National NGO Council",
               },
               {
                 year: "2021",
                 title: "Innovation in Mental Health",
-                awarding_body: "Asia Health Forum"
+                awarding_body: "Asia Health Forum",
               },
               {
                 year: "2020",
                 title: "Service to Society Award",
-                awarding_body: "Kolkata Municipal Corporation"
+                awarding_body: "Kolkata Municipal Corporation",
               },
             ].map((award, index) => (
               <div key={index} className="flex gap-4 p-6 bg-gray-50 rounded-lg">
                 <Award className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-sm font-semibold text-primary mb-1">{award.year}</p>
-                  <h3 className="text-lg font-semibold text-gray-900">{award.title}</h3>
+                  <p className="text-sm font-semibold text-primary mb-1">
+                    {award.year}
+                  </p>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {award.title}
+                  </h3>
                   <p className="text-gray-600 text-sm">{award.awarding_body}</p>
                 </div>
               </div>
@@ -215,7 +260,8 @@ export default function About() {
             Join Us in Our Mission
           </h2>
           <p className="text-lg text-white/80 mb-8">
-            Be part of a movement to transform mental health and healthcare in India
+            Be part of a movement to transform mental health and healthcare in
+            India
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link

@@ -1,38 +1,52 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
-import { ArrowRight, Heart, Brain, Users, Stethoscope, MessageCircle, BookOpen } from "lucide-react";
+import {
+  ArrowRight,
+  Heart,
+  Brain,
+  Users,
+  Stethoscope,
+  MessageCircle,
+  BookOpen,
+} from "lucide-react";
 
 export default function Home() {
   const galleryImages = [
     {
       id: 1,
       title: "Mental Health Awareness Workshop",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     },
     {
       id: 2,
       title: "Community Counseling Session",
-      image: "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
     },
     {
       id: 3,
       title: "Healthcare Camp",
-      image: "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop",
     },
     {
       id: 4,
       title: "Stress Management Training",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     },
     {
       id: 5,
       title: "Team Meeting",
-      image: "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop",
     },
     {
       id: 6,
       title: "Group Therapy Session",
-      image: "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
     },
   ];
 
@@ -51,7 +65,10 @@ export default function Home() {
                 Partnering For Change
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                We provide comprehensive mental health services, psychological counseling, and healthcare interventions to underserved communities across India. Our mission is to make quality mental healthcare accessible to all.
+                We provide comprehensive mental health services, psychological
+                counseling, and healthcare interventions to underserved
+                communities across India. Our mission is to make quality mental
+                healthcare accessible to all.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link
@@ -124,7 +141,9 @@ export default function Home() {
               <span className="text-pink-700">Do</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We work in the field of mental health and healthcare, providing psychological support, counseling, and medical interventions to vulnerable communities across India.
+              We work in the field of mental health and healthcare, providing
+              psychological support, counseling, and medical interventions to
+              vulnerable communities across India.
             </p>
           </div>
 
@@ -141,7 +160,8 @@ export default function Home() {
               <div className="p-8 bg-pink-700 text-white">
                 <h3 className="text-2xl font-bold mb-3">Mental Health</h3>
                 <p className="text-pink-100 mb-4">
-                  Comprehensive psychological counseling, therapy, and mental health awareness programs for individuals and communities.
+                  Comprehensive psychological counseling, therapy, and mental
+                  health awareness programs for individuals and communities.
                 </p>
                 <Link
                   to="/news"
@@ -164,7 +184,8 @@ export default function Home() {
               <div className="p-8 bg-teal-700 text-white">
                 <h3 className="text-2xl font-bold mb-3">Healthcare Services</h3>
                 <p className="text-teal-100 mb-4">
-                  Medical consultation, health awareness, and preventive care programs for underserved populations.
+                  Medical consultation, health awareness, and preventive care
+                  programs for underserved populations.
                 </p>
                 <Link
                   to="/news"
@@ -195,32 +216,36 @@ export default function Home() {
               {
                 icon: <Brain className="w-8 h-8" />,
                 title: "Psychological Counseling",
-                description: "Individual and group counseling sessions led by certified psychologists"
+                description:
+                  "Individual and group counseling sessions led by certified psychologists",
               },
               {
                 icon: <Heart className="w-8 h-8" />,
                 title: "Mental Health Awareness",
-                description: "Community programs and workshops on mental wellness"
+                description:
+                  "Community programs and workshops on mental wellness",
               },
               {
                 icon: <Stethoscope className="w-8 h-8" />,
                 title: "Medical Consultation",
-                description: "Healthcare services and medical consultations"
+                description: "Healthcare services and medical consultations",
               },
               {
                 icon: <MessageCircle className="w-8 h-8" />,
                 title: "Crisis Support",
-                description: "24/7 helpline and emergency mental health support"
+                description:
+                  "24/7 helpline and emergency mental health support",
               },
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Family Counseling",
-                description: "Family therapy and relationship counseling"
+                description: "Family therapy and relationship counseling",
               },
               {
                 icon: <BookOpen className="w-8 h-8" />,
                 title: "Educational Programs",
-                description: "Training and awareness programs for schools and organizations"
+                description:
+                  "Training and awareness programs for schools and organizations",
               },
             ].map((service, index) => (
               <div
@@ -244,11 +269,10 @@ export default function Home() {
       <section className="bg-teal-700 py-16 md:py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Impact
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
             <p className="text-teal-100 max-w-2xl mx-auto">
-              Making a measurable difference in mental health and healthcare access
+              Making a measurable difference in mental health and healthcare
+              access
             </p>
           </div>
 
@@ -279,10 +303,18 @@ export default function Home() {
                 Celebrating Our Journey in Changing Lives
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Since our founding, we have been committed to providing accessible mental health and healthcare services to communities that need them most. Through dedicated work and community partnerships, we have reached thousands of individuals and families.
+                Since our founding, we have been committed to providing
+                accessible mental health and healthcare services to communities
+                that need them most. Through dedicated work and community
+                partnerships, we have reached thousands of individuals and
+                families.
               </p>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Our approach combines clinical expertise with community understanding, ensuring that our services are culturally sensitive and effective. We believe that mental health is a human right and work tirelessly to break stigma and increase awareness.
+                Our approach combines clinical expertise with community
+                understanding, ensuring that our services are culturally
+                sensitive and effective. We believe that mental health is a
+                human right and work tirelessly to break stigma and increase
+                awareness.
               </p>
               <Link
                 to="/about"
@@ -318,18 +350,24 @@ export default function Home() {
             {[
               {
                 title: "If You're Struggling",
-                description: "Are facing emotional, behavioral, learning problems, depression, anxiety or other mental health concerns"
+                description:
+                  "Are facing emotional, behavioral, learning problems, depression, anxiety or other mental health concerns",
               },
               {
                 title: "For Adults",
-                description: "Dealing with stress, depression, relationship issues, substance abuse, or any mental health challenge"
+                description:
+                  "Dealing with stress, depression, relationship issues, substance abuse, or any mental health challenge",
               },
               {
                 title: "For Organizations",
-                description: "Looking to implement mental health programs, awareness workshops, or staff wellness initiatives"
+                description:
+                  "Looking to implement mental health programs, awareness workshops, or staff wellness initiatives",
               },
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded border-l-4 border-teal-700">
+              <div
+                key={index}
+                className="p-6 bg-gray-50 rounded border-l-4 border-teal-700"
+              >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
@@ -402,7 +440,9 @@ export default function Home() {
             Support Our Mission
           </h2>
           <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
-            Your contribution helps us provide mental health services and healthcare to underserved communities. Every donation, regardless of size, makes a real difference.
+            Your contribution helps us provide mental health services and
+            healthcare to underserved communities. Every donation, regardless of
+            size, makes a real difference.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -422,7 +462,8 @@ export default function Home() {
           </div>
 
           <p className="mt-8 text-teal-100 text-sm">
-            Your donation is secure and will be used transparently. We are a registered organization with all necessary legal clearances.
+            Your donation is secure and will be used transparently. We are a
+            registered organization with all necessary legal clearances.
           </p>
         </div>
       </section>

@@ -12,7 +12,9 @@ export default function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -23,7 +25,9 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Contact form:", formData);
-    alert("Thank you for contacting us! We'll get back to you within 24 hours.");
+    alert(
+      "Thank you for contacting us! We'll get back to you within 24 hours.",
+    );
     setFormData({
       name: "",
       email: "",
@@ -40,7 +44,8 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Have questions or need support? We're here to help. Reach out to us anytime.
+            Have questions or need support? We're here to help. Reach out to us
+            anytime.
           </p>
         </div>
       </section>
@@ -54,11 +59,16 @@ export default function Contact() {
               <div className="flex justify-center mb-4">
                 <MapPin className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Address
+              </h3>
               <p className="text-gray-600 text-sm">
-                Healthcare Foundation<br />
-                123 Medical Street<br />
-                Kolkata, West Bengal 700001<br />
+                Healthcare Foundation
+                <br />
+                123 Medical Street
+                <br />
+                Kolkata, West Bengal 700001
+                <br />
                 India
               </p>
             </div>
@@ -68,14 +78,22 @@ export default function Contact() {
               <div className="flex justify-center mb-4">
                 <Phone className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Phone
+              </h3>
               <p className="text-gray-600 text-sm mb-2">
-                <a href="tel:+919876543210" className="hover:text-primary transition-colors">
+                <a
+                  href="tel:+919876543210"
+                  className="hover:text-primary transition-colors"
+                >
                   +91 98765 43210
                 </a>
               </p>
               <p className="text-gray-600 text-sm">
-                <a href="tel:+919123456789" className="hover:text-primary transition-colors">
+                <a
+                  href="tel:+919123456789"
+                  className="hover:text-primary transition-colors"
+                >
                   +91 91234 56789
                 </a>
               </p>
@@ -86,14 +104,22 @@ export default function Contact() {
               <div className="flex justify-center mb-4">
                 <Mail className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Email
+              </h3>
               <p className="text-gray-600 text-sm mb-1">
-                <a href="mailto:info@healthcarefoundation.org" className="hover:text-primary transition-colors">
+                <a
+                  href="mailto:info@healthcarefoundation.org"
+                  className="hover:text-primary transition-colors"
+                >
                   info@healthcarefoundation.org
                 </a>
               </p>
               <p className="text-gray-600 text-sm">
-                <a href="mailto:support@healthcarefoundation.org" className="hover:text-primary transition-colors">
+                <a
+                  href="mailto:support@healthcarefoundation.org"
+                  className="hover:text-primary transition-colors"
+                >
                   support@healthcarefoundation.org
                 </a>
               </p>
@@ -104,11 +130,16 @@ export default function Contact() {
               <div className="flex justify-center mb-4">
                 <Clock className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Hours</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Hours
+              </h3>
               <p className="text-gray-600 text-sm">
-                Monday - Friday<br />
-                9:00 AM - 6:00 PM<br />
-                Saturday<br />
+                Monday - Friday
+                <br />
+                9:00 AM - 6:00 PM
+                <br />
+                Saturday
+                <br />
                 10:00 AM - 4:00 PM
               </p>
             </div>
@@ -120,13 +151,15 @@ export default function Contact() {
               🆘 24/7 Crisis Support Helpline
             </h3>
             <p className="text-gray-700 mb-3">
-              If you or someone you know is experiencing a mental health crisis, please reach out immediately:
+              If you or someone you know is experiencing a mental health crisis,
+              please reach out immediately:
             </p>
             <div className="text-2xl font-bold text-secondary mb-2">
               +91 XXXX 987 654
             </div>
             <p className="text-gray-600 text-sm">
-              Available 24 hours a day, 7 days a week. Free and confidential support.
+              Available 24 hours a day, 7 days a week. Free and confidential
+              support.
             </p>
           </div>
         </div>
@@ -155,10 +188,14 @@ export default function Contact() {
             Send us a Message
           </h2>
           <p className="text-gray-600 text-center mb-10">
-            Fill out the form below and we'll get back to you as soon as possible
+            Fill out the form below and we'll get back to you as soon as
+            possible
           </p>
 
-          <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-gray-50 p-8 rounded-lg space-y-6"
+          >
             {/* Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-900 mb-2">
@@ -272,19 +309,19 @@ export default function Contact() {
             {[
               {
                 q: "How can I access your counseling services?",
-                a: "You can reach out via phone, email, or fill out our contact form. Our team will schedule an appointment or consultation based on your needs."
+                a: "You can reach out via phone, email, or fill out our contact form. Our team will schedule an appointment or consultation based on your needs.",
               },
               {
                 q: "What if I need urgent mental health support?",
-                a: "Please call our 24/7 crisis helpline at +91 XXXX 987 654. Our trained counselors are available round the clock for emergencies."
+                a: "Please call our 24/7 crisis helpline at +91 XXXX 987 654. Our trained counselors are available round the clock for emergencies.",
               },
               {
                 q: "Do you provide online counseling?",
-                a: "Yes, we offer both in-person and online counseling sessions through secure video platforms. Contact us to book your session."
+                a: "Yes, we offer both in-person and online counseling sessions through secure video platforms. Contact us to book your session.",
               },
               {
                 q: "What is your cancellation policy?",
-                a: "Cancellations made 24 hours in advance are free. Late cancellations may incur charges. Contact us for details."
+                a: "Cancellations made 24 hours in advance are free. Late cancellations may incur charges. Contact us for details.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">

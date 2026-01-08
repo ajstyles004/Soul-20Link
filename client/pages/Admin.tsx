@@ -1,6 +1,13 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
-import { Lock, Users, FileText, Image, Heart, MessageSquare } from "lucide-react";
+import {
+  Lock,
+  Users,
+  FileText,
+  Image,
+  Heart,
+  MessageSquare,
+} from "lucide-react";
 
 export default function Admin() {
   const [password, setPassword] = useState("");
@@ -57,7 +64,8 @@ export default function Admin() {
               </form>
 
               <p className="text-center text-sm text-gray-600 mt-6 pt-6 border-t border-gray-300">
-                Demo password: <code className="bg-gray-100 px-2 py-1 rounded">admin123</code>
+                Demo password:{" "}
+                <code className="bg-gray-100 px-2 py-1 rounded">admin123</code>
               </p>
             </div>
           </div>
@@ -154,12 +162,14 @@ export default function Admin() {
               {[
                 {
                   title: "Manage Members",
-                  description: "Approve/reject member registrations and manage team members",
+                  description:
+                    "Approve/reject member registrations and manage team members",
                   icon: <Users className="w-12 h-12" />,
                 },
                 {
                   title: "Manage News",
-                  description: "Add, edit, and delete news articles and press releases",
+                  description:
+                    "Add, edit, and delete news articles and press releases",
                   icon: <FileText className="w-12 h-12" />,
                 },
                 {
@@ -222,14 +232,39 @@ export default function Admin() {
                 </thead>
                 <tbody>
                   {[
-                    { activity: "New member registration - Rajesh Gupta", date: "2024-01-15", status: "Pending" },
-                    { activity: "Donation received - ₹5000", date: "2024-01-14", status: "Verified" },
-                    { activity: "News article posted - Mental Health Awareness", date: "2024-01-13", status: "Published" },
-                    { activity: "Contact message from John Doe", date: "2024-01-12", status: "New" },
-                    { activity: "Gallery images uploaded - Event 2024", date: "2024-01-11", status: "Approved" },
+                    {
+                      activity: "New member registration - Rajesh Gupta",
+                      date: "2024-01-15",
+                      status: "Pending",
+                    },
+                    {
+                      activity: "Donation received - ₹5000",
+                      date: "2024-01-14",
+                      status: "Verified",
+                    },
+                    {
+                      activity: "News article posted - Mental Health Awareness",
+                      date: "2024-01-13",
+                      status: "Published",
+                    },
+                    {
+                      activity: "Contact message from John Doe",
+                      date: "2024-01-12",
+                      status: "New",
+                    },
+                    {
+                      activity: "Gallery images uploaded - Event 2024",
+                      date: "2024-01-11",
+                      status: "Approved",
+                    },
                   ].map((row, index) => (
-                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                      <td className="py-4 px-4 text-gray-900">{row.activity}</td>
+                    <tr
+                      key={index}
+                      className="border-b border-gray-100 hover:bg-gray-50"
+                    >
+                      <td className="py-4 px-4 text-gray-900">
+                        {row.activity}
+                      </td>
                       <td className="py-4 px-4 text-gray-600">{row.date}</td>
                       <td className="py-4 px-4">
                         <span

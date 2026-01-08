@@ -20,7 +20,9 @@ export default function Donation() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -32,7 +34,7 @@ export default function Donation() {
     e.preventDefault();
     console.log("Donation confirmation:", formData);
     alert(
-      "Thank you for your generous donation! We will verify your transaction and send you a confirmation email shortly."
+      "Thank you for your generous donation! We will verify your transaction and send you a confirmation email shortly.",
     );
     setFormData({
       donorName: "",
@@ -52,9 +54,12 @@ export default function Donation() {
           <div className="flex justify-center mb-6">
             <Heart className="w-16 h-16" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Make a Donation</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Make a Donation
+          </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Your contribution helps us provide mental health services and healthcare to underserved communities
+            Your contribution helps us provide mental health services and
+            healthcare to underserved communities
           </p>
         </div>
       </section>
@@ -63,7 +68,9 @@ export default function Donation() {
       <section className="bg-blue-50 border-l-4 border-primary py-8 mx-4 my-8 md:mx-0 md:my-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gray-700 font-semibold">
-            💡 <strong>Important:</strong> Donations are voluntary and non-refundable. Your contributions are processed with complete transparency and are tax-deductible (details below).
+            💡 <strong>Important:</strong> Donations are voluntary and
+            non-refundable. Your contributions are processed with complete
+            transparency and are tax-deductible (details below).
           </p>
         </div>
       </section>
@@ -79,7 +86,9 @@ export default function Donation() {
             {/* UPI Section */}
             <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-lg border-2 border-primary">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-sm">1</span>
+                <span className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center text-sm">
+                  1
+                </span>
                 UPI Donation (Recommended)
               </h3>
 
@@ -125,14 +134,17 @@ export default function Donation() {
               </div>
 
               <p className="mt-6 text-sm text-gray-600 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                ✅ <strong>Benefits:</strong> Instant, transparent, and direct transfer to our account
+                ✅ <strong>Benefits:</strong> Instant, transparent, and direct
+                transfer to our account
               </p>
             </div>
 
             {/* Bank Transfer Section */}
             <div className="bg-gradient-to-br from-pink-50 to-red-50 p-8 rounded-lg border-2 border-secondary">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center text-sm">2</span>
+                <span className="bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center text-sm">
+                  2
+                </span>
                 Bank Transfer
               </h3>
 
@@ -217,7 +229,8 @@ export default function Donation() {
               </div>
 
               <p className="mt-6 text-sm text-gray-600 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                📝 <strong>Important:</strong> Please mention your name in the transaction remarks/description
+                📝 <strong>Important:</strong> Please mention your name in the
+                transaction remarks/description
               </p>
             </div>
           </div>
@@ -231,10 +244,14 @@ export default function Donation() {
             Donation Confirmation
           </h2>
           <p className="text-gray-600 text-center mb-8">
-            After making your donation, please fill out this form so we can track and acknowledge your contribution
+            After making your donation, please fill out this form so we can
+            track and acknowledge your contribution
           </p>
 
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+          >
             {/* Donor Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-900 mb-2">
@@ -340,8 +357,9 @@ export default function Donation() {
             </div>
 
             <p className="text-center text-sm text-gray-600 pt-4 border-t border-gray-300">
-              Your donation will be verified by our admin team within 3-5 business days.
-              You'll receive a confirmation email with your donation receipt.
+              Your donation will be verified by our admin team within 3-5
+              business days. You'll receive a confirmation email with your
+              donation receipt.
             </p>
           </form>
         </div>
@@ -356,11 +374,15 @@ export default function Donation() {
 
           <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg border-l-4 border-green-500">
             <p className="text-gray-700 mb-4">
-              Your donation to Healthcare Foundation is <strong>tax-deductible</strong> under Section 80G of the Indian Income Tax Act. We are registered as a charitable organization.
+              Your donation to Healthcare Foundation is{" "}
+              <strong>tax-deductible</strong> under Section 80G of the Indian
+              Income Tax Act. We are registered as a charitable organization.
             </p>
             <dl className="space-y-3 text-gray-700">
               <div>
-                <dt className="font-semibold text-gray-900">Tax Exemption Number:</dt>
+                <dt className="font-semibold text-gray-900">
+                  Tax Exemption Number:
+                </dt>
                 <dd className="text-gray-600">80G/2010/12345</dd>
               </div>
               <div>
@@ -369,7 +391,9 @@ export default function Donation() {
               </div>
               <div>
                 <dt className="font-semibold text-gray-900">You can claim:</dt>
-                <dd className="text-gray-600">50% of your donation as a tax deduction</dd>
+                <dd className="text-gray-600">
+                  50% of your donation as a tax deduction
+                </dd>
               </div>
             </dl>
           </div>
@@ -387,19 +411,19 @@ export default function Donation() {
             {[
               {
                 q: "How is my donation used?",
-                a: "Your donation directly supports our mental health services, counseling programs, healthcare camps, and awareness initiatives."
+                a: "Your donation directly supports our mental health services, counseling programs, healthcare camps, and awareness initiatives.",
               },
               {
                 q: "Is my donation secure?",
-                a: "Yes, all donations are processed through secure payment channels. We also accept direct bank transfers for complete transparency."
+                a: "Yes, all donations are processed through secure payment channels. We also accept direct bank transfers for complete transparency.",
               },
               {
                 q: "Will I receive a receipt?",
-                a: "Yes, you'll receive a detailed donation receipt and tax acknowledgment via email within 3-5 business days."
+                a: "Yes, you'll receive a detailed donation receipt and tax acknowledgment via email within 3-5 business days.",
               },
               {
                 q: "Can I set up a recurring donation?",
-                a: "Yes! Please contact us at donations@healthcarefoundation.org for setting up monthly or quarterly recurring donations."
+                a: "Yes! Please contact us at donations@healthcarefoundation.org for setting up monthly or quarterly recurring donations.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg">
@@ -421,8 +445,9 @@ export default function Donation() {
             Thank You for Your Support
           </h2>
           <p className="text-lg text-white/80">
-            Your generosity makes a real difference in the lives of those we serve.
-            Together, we're building a healthier, more compassionate world.
+            Your generosity makes a real difference in the lives of those we
+            serve. Together, we're building a healthier, more compassionate
+            world.
           </p>
         </div>
       </section>

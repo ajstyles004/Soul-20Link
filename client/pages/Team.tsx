@@ -13,7 +13,9 @@ export default function Team() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -24,7 +26,9 @@ export default function Team() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for your interest! We will review your application and get back to you soon.");
+    alert(
+      "Thank you for your interest! We will review your application and get back to you soon.",
+    );
     setFormData({
       name: "",
       email: "",
@@ -39,25 +43,29 @@ export default function Team() {
       name: "Dr. Rajesh Sharma",
       position: "Founder & Medical Director",
       bio: "MD Psychiatry with 20+ years of experience in mental health services",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
     },
     {
       name: "Dr. Sarah Johnson",
       position: "Clinical Psychologist",
       bio: "Specialized in cognitive behavioral therapy and trauma counseling",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop",
     },
     {
       name: "Priya Sharma",
       position: "Senior Counselor",
       bio: "Certified counselor with expertise in family and relationship therapy",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop",
     },
     {
       name: "Amit Patel",
       position: "Community Coordinator",
       bio: "Leads community outreach and awareness programs",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop",
     },
   ];
 
@@ -68,7 +76,8 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Dedicated professionals committed to mental health and healthcare excellence
+            Dedicated professionals committed to mental health and healthcare
+            excellence
           </p>
         </div>
       </section>
@@ -82,7 +91,10 @@ export default function Team() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="h-48 overflow-hidden">
                   <img
                     src={member.image}
@@ -112,7 +124,9 @@ export default function Team() {
             Join Our Mission
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Are you passionate about mental health and healthcare? We're always looking for dedicated professionals and volunteers to join our team. Fill out the form below to express your interest.
+            Are you passionate about mental health and healthcare? We're always
+            looking for dedicated professionals and volunteers to join our team.
+            Fill out the form below to express your interest.
           </p>
 
           <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-8 md:p-12 rounded-lg">
@@ -212,7 +226,8 @@ export default function Team() {
               </div>
 
               <p className="text-center text-sm text-gray-600 pt-4 border-t border-gray-300">
-                Your application will be reviewed by our admin team and we'll get back to you within 7 business days.
+                Your application will be reviewed by our admin team and we'll
+                get back to you within 7 business days.
               </p>
             </form>
           </div>
@@ -230,15 +245,18 @@ export default function Team() {
             {[
               {
                 title: "Counseling Support",
-                description: "Help provide emotional support during counseling sessions and support groups"
+                description:
+                  "Help provide emotional support during counseling sessions and support groups",
               },
               {
                 title: "Awareness Programs",
-                description: "Conduct mental health awareness workshops in schools and communities"
+                description:
+                  "Conduct mental health awareness workshops in schools and communities",
               },
               {
                 title: "Administrative Support",
-                description: "Assist with program coordination, data entry, and office management"
+                description:
+                  "Assist with program coordination, data entry, and office management",
               },
             ].map((opportunity, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">

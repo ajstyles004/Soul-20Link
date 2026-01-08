@@ -32,8 +32,12 @@ export default function Layout({ children }: LayoutProps) {
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div className="hidden sm:block">
-                  <div className="text-lg font-bold text-gray-900">Healthcare Foundation</div>
-                  <div className="text-xs text-primary font-medium">Mental Health & Psychology</div>
+                  <div className="text-lg font-bold text-gray-900">
+                    Healthcare Foundation
+                  </div>
+                  <div className="text-xs text-primary font-medium">
+                    Mental Health & Psychology
+                  </div>
                 </div>
               </div>
             </Link>
@@ -86,9 +90,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow">
-        {children}
-      </main>
+      <main className="flex-grow">{children}</main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -103,7 +105,8 @@ export default function Layout({ children }: LayoutProps) {
                 <h3 className="text-lg font-bold">Healthcare Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Providing mental health and healthcare services to underserved communities across India.
+                Providing mental health and healthcare services to underserved
+                communities across India.
               </p>
               <div className="flex gap-4">
                 <a
@@ -111,7 +114,11 @@ export default function Layout({ children }: LayoutProps) {
                   className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Facebook"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M8 12.05a4 4 0 1 1 8 0 4 4 0 0 1-8 0z" />
                   </svg>
                 </a>
@@ -120,7 +127,11 @@ export default function Layout({ children }: LayoutProps) {
                   className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Twitter"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z" />
                   </svg>
                 </a>
@@ -129,8 +140,22 @@ export default function Layout({ children }: LayoutProps) {
                   className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Instagram"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
                   </svg>
                 </a>
               </div>
@@ -141,17 +166,26 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-semibold mb-4">About Us</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link to="/about" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/about"
+                    className="hover:text-primary transition-colors"
+                  >
                     Our Story
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/about"
+                    className="hover:text-primary transition-colors"
+                  >
                     Mission & Vision
                   </Link>
                 </li>
                 <li>
-                  <Link to="/team" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/team"
+                    className="hover:text-primary transition-colors"
+                  >
                     Our Team
                   </Link>
                 </li>
@@ -168,12 +202,18 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link to="/news" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/news"
+                    className="hover:text-primary transition-colors"
+                  >
                     Latest News
                   </Link>
                 </li>
                 <li>
-                  <Link to="/gallery" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/gallery"
+                    className="hover:text-primary transition-colors"
+                  >
                     Gallery
                   </Link>
                 </li>
@@ -195,17 +235,26 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a href="tel:+919876543210" className="hover:text-primary transition-colors">
+                  <a
+                    href="tel:+919876543210"
+                    className="hover:text-primary transition-colors"
+                  >
                     +91 98765 43210
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@ngo.org" className="hover:text-primary transition-colors">
+                  <a
+                    href="mailto:info@ngo.org"
+                    className="hover:text-primary transition-colors"
+                  >
                     info@ngo.org
                   </a>
                 </li>
                 <li>
-                  <Link to="/contact" className="hover:text-primary transition-colors">
+                  <Link
+                    to="/contact"
+                    className="hover:text-primary transition-colors"
+                  >
                     Contact Us
                   </Link>
                 </li>
@@ -216,16 +265,29 @@ export default function Layout({ children }: LayoutProps) {
           <div className="border-t border-gray-800 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm text-gray-400">
               <div>
-                <p className="font-semibold text-white mb-1">Organization Details</p>
-                <p>Registration No: HCF/2010/12345 | PAN: AABCT5050D | 80G: 80G/2010/12345</p>
+                <p className="font-semibold text-white mb-1">
+                  Organization Details
+                </p>
+                <p>
+                  Registration No: HCF/2010/12345 | PAN: AABCT5050D | 80G:
+                  80G/2010/12345
+                </p>
               </div>
               <div>
-                <p className="font-semibold text-white mb-1">Legal Disclaimer</p>
-                <p>Donations are voluntary and non-refundable. All contributions are utilized transparently and accounted for.</p>
+                <p className="font-semibold text-white mb-1">
+                  Legal Disclaimer
+                </p>
+                <p>
+                  Donations are voluntary and non-refundable. All contributions
+                  are utilized transparently and accounted for.
+                </p>
               </div>
             </div>
             <div className="text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
-              <p>&copy; 2024 Healthcare Foundation, Kolkata. All rights reserved. | Mental Health & Healthcare Services</p>
+              <p>
+                &copy; 2024 Healthcare Foundation, Kolkata. All rights reserved.
+                | Mental Health & Healthcare Services
+              </p>
             </div>
           </div>
         </div>
