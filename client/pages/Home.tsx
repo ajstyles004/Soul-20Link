@@ -115,8 +115,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-teal-700">What We </span>
-              <span className="text-pink-700">Do</span>
+              <span className="text-cyan-600">What We </span>
+              <span className="text-red-600">Do</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               We work in the field of mental health and healthcare, providing
@@ -135,15 +135,15 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 bg-pink-700 text-white">
+              <div className="p-8 bg-red-600 text-white">
                 <h3 className="text-2xl font-bold mb-3">Mental Health</h3>
-                <p className="text-pink-100 mb-4">
+                <p className="text-red-100 mb-4">
                   Comprehensive psychological counseling, therapy, and mental
                   health awareness programs for individuals and communities.
                 </p>
                 <Link
                   to="/news"
-                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-pink-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-red-200 transition-colors"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -159,15 +159,15 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 bg-teal-700 text-white">
+              <div className="p-8 bg-cyan-500 text-white">
                 <h3 className="text-2xl font-bold mb-3">Healthcare Services</h3>
-                <p className="text-teal-100 mb-4">
+                <p className="text-cyan-100 mb-4">
                   Medical consultation, health awareness, and preventive care
                   programs for underserved populations.
                 </p>
                 <Link
                   to="/news"
-                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-teal-200 transition-colors"
+                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-cyan-200 transition-colors"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
