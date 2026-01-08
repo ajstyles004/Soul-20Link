@@ -27,13 +27,13 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-md">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div className="hidden sm:block">
-                  <div className="text-lg font-bold text-gray-900">NGO Name</div>
-                  <div className="text-xs text-gray-600">Making a difference</div>
+                  <div className="text-lg font-bold text-gray-900">Healthcare Foundation</div>
+                  <div className="text-xs text-primary font-medium">Mental Health & Psychology</div>
                 </div>
               </div>
             </Link>
