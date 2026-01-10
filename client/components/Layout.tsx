@@ -175,11 +175,11 @@ export default function Layout({ children }: LayoutProps) {
                 <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Soul Link Foundation</h3>
+                <h3 className="text-lg font-bold">SoulLink Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Providing mental health and healthcare services to underserved
-                communities across India.
+                Advancing inclusive mental well-being and psychological support globally.
+                Contact Prajit Rong for services and inquiries.
               </p>
               <div className="flex gap-4">
                 <a
