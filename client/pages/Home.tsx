@@ -379,7 +379,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded transition-colors"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded transition-colors"
             >
               Contact Us <ArrowRight className="w-4 h-4" />
             </Link>
