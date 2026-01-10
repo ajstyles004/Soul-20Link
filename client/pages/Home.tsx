@@ -183,13 +183,13 @@ export default function Home() {
               </div>
               <div className="p-8 bg-secondary text-white">
                 <h3 className="text-2xl font-bold mb-3">Healthcare Services</h3>
-                <p className="text-blue-100 mb-4">
+                <p className="text-secondary/90 mb-4">
                   Medical consultation, health awareness, and preventive care
                   programs for underserved populations.
                 </p>
                 <Link
-                  to="/news"
-                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-blue-200 transition-colors"
+                  to="/services"
+                  className="inline-flex items-center gap-2 text-white font-semibold hover:text-secondary/80 transition-colors"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>
