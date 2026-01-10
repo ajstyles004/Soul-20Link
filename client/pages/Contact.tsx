@@ -319,20 +319,24 @@ export default function Contact() {
           <div className="space-y-6">
             {[
               {
-                q: "How can I access your counseling services?",
-                a: "You can reach out via phone, email, or fill out our contact form. Our team will schedule an appointment or consultation based on your needs.",
+                q: "What's the best way to contact you?",
+                a: "We prefer phone calls (WhatsApp or regular call) as they allow us to better understand your needs and provide more effective support. You can reach us during 10:00 AM - 7:00 PM, Monday to Saturday.",
               },
               {
-                q: "What if I need urgent mental health support?",
-                a: "Please call our 24/7 crisis helpline at +91 XXXX 987 654. Our trained counselors are available round the clock for emergencies.",
+                q: "Can I reach you outside of office hours?",
+                a: "For urgent matters outside our regular hours, please send an email to teamprajitrong@gmail.com. We'll respond as soon as possible.",
               },
               {
-                q: "Do you provide online counseling?",
-                a: "Yes, we offer both in-person and online counseling sessions through secure video platforms. Contact us to book your session.",
+                q: "What services does SoulLink Foundation provide?",
+                a: "We provide comprehensive mental health services including psychological counseling, cognitive development programs, crisis support, resilience building, and community-based mental health initiatives.",
               },
               {
-                q: "What is your cancellation policy?",
-                a: "Cancellations made 24 hours in advance are free. Late cancellations may incur charges. Contact us for details.",
+                q: "How do I schedule a consultation?",
+                a: "Simply call or WhatsApp us during office hours. Our team will discuss your needs and schedule an appointment at a convenient time.",
+              },
+              {
+                q: "Do you offer online counseling?",
+                a: "Yes, we offer both in-person and online counseling sessions. Discuss your preference when you contact us.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
