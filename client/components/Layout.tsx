@@ -145,11 +145,12 @@ export default function Layout({ children }: LayoutProps) {
       {/* Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-40">
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919876543210?text=Hello%20Prajit%20Rong%2C%20I%20am%20interested%20in%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
           aria-label="WhatsApp"
+          title="Chat with us on WhatsApp"
         >
           <MessageCircle className="w-7 h-7" />
         </a>
