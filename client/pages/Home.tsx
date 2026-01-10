@@ -287,7 +287,7 @@ export default function Home() {
                 <div className="text-4xl md:text-5xl font-bold mb-2">
                   {stat.number}
                 </div>
-                <p className="text-blue-100 font-medium">{stat.label}</p>
+                <p className="text-primary/90 font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
