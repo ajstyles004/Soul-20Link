@@ -178,7 +178,7 @@ export default function ImpactSection() {
               Learn More
             </Link>
             <Link
-              to="/get-involved"
+              to="/fundraising"
               className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-block"
             >
               Get Involved
