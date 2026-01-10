@@ -54,41 +54,128 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Vision & Mission */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Vision */}
+            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-secondary">
+              <div className="flex items-center gap-3 mb-4">
+                <Heart className="w-8 h-8 text-secondary" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  🌍 Our Vision
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Our vision is to create a world where mental well-being is
+                accessible to everyone, without financial or social barriers. We
+                aim to build a global ecosystem of mental relief and
+                psychological support that serves individuals across all
+                regions—from remote communities to modern cities—and across all
+                economic backgrounds. Mental health is universal, and our vision
+                reaches beyond borders, cultures, and continents.
+              </p>
+            </div>
+
             {/* Mission */}
             <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-primary">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="w-8 h-8 text-primary" />
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Our Mission
+                  🎯 Our Mission
                 </h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                To provide accessible, high-quality mental health and healthcare
-                services to underserved communities across India. We are
-                committed to promoting mental wellness, reducing stigma, and
-                empowering individuals to lead healthier, more fulfilling lives
-                through evidence-based interventions and compassionate care.
+                Our mission is to deliver mental relief, mind improvement, and
+                psychological well-being through advanced, modern, and
+                evidence-based therapeutic approaches. We are committed to
+                ensuring that access to mental health support is never limited
+                by economic conditions. Our services are designed to be
+                inclusive, ethical, and available to all individuals, regardless
+                of their financial background, geographic location, or social
+                status.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Vision */}
-            <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-secondary">
-              <div className="flex items-center gap-3 mb-4">
-                <Heart className="w-8 h-8 text-secondary" />
-                <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
+      {/* What We Do */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              🧠 What We Do
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              We are a non-profit organization working to make mental health
+              support inclusive and universally accessible.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              "Providing mental relief and emotional support using modern therapeutic techniques",
+              "Enhancing mental clarity, resilience, and overall well-being",
+              "Reaching both underserved communities and urban populations",
+              "Serving individuals across diverse economic and cultural backgrounds",
+              "Expanding our impact globally, from developing regions to developed nations",
+            ].map((item, index) => (
+              <div key={index} className="flex gap-4 p-6 bg-gray-50 rounded-lg">
+                <div className="text-primary text-2xl font-bold flex-shrink-0">
+                  •
+                </div>
+                <p className="text-gray-700">{item}</p>
               </div>
-              <p className="text-gray-700 leading-relaxed">
-                A society where mental health is valued equally with physical
-                health, where every individual has access to quality
-                psychological support and healthcare services, and where
-                compassion, understanding, and science guide our path toward
-                creating a healthier, more equitable world.
-              </p>
-            </div>
+            ))}
+          </div>
+
+          <div className="mt-12 p-8 bg-blue-50 rounded-lg border-l-4 border-primary">
+            <p className="text-gray-700 leading-relaxed">
+              Our approach is rooted in compassion, dignity, and the belief that
+              mental wellness should not be restricted by financial or social
+              limitations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Us Different */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            💙 What Makes Us Different
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Inclusive Approach",
+                description:
+                  "We prioritize access over affordability, ensuring no one is left behind",
+              },
+              {
+                title: "Universal Support",
+                description:
+                  "Equal support for individuals from all walks of life",
+              },
+              {
+                title: "Global Outlook",
+                description:
+                  "A mission without geographical or economic boundaries",
+              },
+              {
+                title: "Ethics & Empathy",
+                description: "A mission driven by ethics, empathy, and impact",
+              },
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold text-primary mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

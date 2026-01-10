@@ -15,6 +15,9 @@ import Certificates from "./pages/Certificates";
 import Donation from "./pages/Donation";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import Services from "./pages/Services";
+import Impact from "./pages/Impact";
+import Fundraising from "./pages/Fundraising";
 import NotFound from "./pages/NotFound";
 
 declare global {
@@ -40,6 +43,9 @@ const App = () => (
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/donate" element={<Donation />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/impact" element={<Impact />} />
+          <Route path="/fundraising" element={<Fundraising />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

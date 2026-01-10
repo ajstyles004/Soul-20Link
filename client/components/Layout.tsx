@@ -21,8 +21,9 @@ export default function Layout({ children }: LayoutProps) {
 
   const navLinks = [
     { label: "About Us", href: "/about" },
-    { label: "What we do", href: "/news" },
-    { label: "Partnership", href: "/contact" },
+    { label: "Services", href: "/services" },
+    { label: "Impact", href: "/impact" },
+    { label: "Partnership", href: "/fundraising" },
     { label: "Get Involved", href: "/donate" },
     { label: "Resources", href: "/gallery" },
   ];
@@ -30,41 +31,36 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Top Blue Header Bar with Scrolling Text */}
-      <div className="bg-blue-600 text-white py-2 overflow-hidden">
+      <div className="bg-primary text-white py-2 overflow-hidden">
         <div className="flex items-center gap-6">
           {/* Scrolling Text */}
           <div className="scroll-text-container flex-1 min-w-0">
             <div className="scroll-text inline-block">
               <span>
-                Soul Link is registered under sections 12A & 80G of the Income
-                Tax Act, 1961 and CSR-1 registered under the Ministry of
-                Corporate Affairs for undertaking CSR activities.{" "}
-                <Link
-                  to="/certificates"
-                  className="font-semibold underline hover:no-underline"
-                >
-                  click here
-                </Link>{" "}
-                to visit all certificates
+                📞 Thank you for contacting Prajit Rong | Calls/WhatsApp
+                Preferred | 📅 Mon-Sat, 10 AM - 7 PM | 📧
+                teamprajitrong@gmail.com | Soul Link Foundation - Advancing
+                Mental Well-Being Globally
               </span>
             </div>
           </div>
 
           {/* Contact Info - Static on desktop, hidden on mobile */}
-          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-blue-500">
+          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-primary/50">
             <a
-              href="tel:+911140538140"
+              href="https://wa.me/919876543210"
               className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+              title="WhatsApp or Call"
             >
               <Phone className="w-4 h-4" />
-              011-40538140
+              Call/WhatsApp
             </a>
             <a
-              href="mailto:info@ngo.org"
+              href="mailto:teamprajitrong@gmail.com"
               className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               <Mail className="w-4 h-4" />
-              info@ngo.org
+              teamprajitrong@gmail.com
             </a>
           </div>
         </div>
@@ -77,7 +73,7 @@ export default function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md">
                   <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div className="hidden sm:block">
@@ -97,7 +93,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm"
+                  className="text-gray-700 hover:text-primary font-medium transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
@@ -111,7 +107,7 @@ export default function Layout({ children }: LayoutProps) {
               </button>
               <Link
                 to="/donate"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
               >
                 Donate Now
               </Link>
@@ -138,7 +134,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block py-2 text-gray-700 hover:text-red-600 font-medium transition-colors"
+                  className="block py-2 text-gray-700 hover:text-primary font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -152,16 +148,17 @@ export default function Layout({ children }: LayoutProps) {
       {/* Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-40">
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919876543210?text=Hello%20Prajit%20Rong%2C%20I%20am%20interested%20in%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
           aria-label="WhatsApp"
+          title="Chat with us on WhatsApp"
         >
           <MessageCircle className="w-7 h-7" />
         </a>
         <button
-          className="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          className="w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
           aria-label="Help"
         >
           <HelpCircle className="w-7 h-7" />
@@ -178,19 +175,19 @@ export default function Layout({ children }: LayoutProps) {
             {/* About */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Soul Link Foundation</h3>
+                <h3 className="text-lg font-bold">SoulLink Foundation</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Providing mental health and healthcare services to underserved
-                communities across India.
+                Advancing inclusive mental well-being and psychological support
+                globally. Contact Prajit Rong for services and inquiries.
               </p>
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -203,7 +200,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Twitter"
                 >
                   <svg
@@ -216,7 +213,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -247,7 +244,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Our Story
                   </Link>
@@ -255,7 +252,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/about"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Mission & Vision
                   </Link>
@@ -263,13 +260,13 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/team"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500 transition-colors">
+                  <a href="#" className="hover:text-primary transition-colors">
                     Careers
                   </a>
                 </li>
@@ -283,7 +280,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/news"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Latest News
                   </Link>
@@ -291,7 +288,7 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/gallery"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Gallery
                   </Link>
@@ -299,13 +296,13 @@ export default function Layout({ children }: LayoutProps) {
                 <li>
                   <Link
                     to="/certificates"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Certificates
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-500 transition-colors">
+                  <a href="#" className="hover:text-primary transition-colors">
                     Terms of Service
                   </a>
                 </li>
@@ -317,25 +314,27 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a
-                    href="tel:+911140538140"
-                    className="hover:text-blue-500 transition-colors"
-                  >
-                    011-40538140
-                  </a>
+                  <p className="hover:text-primary transition-colors">
+                    Prajit Rong
+                  </p>
                 </li>
                 <li>
                   <a
-                    href="mailto:info@ngo.org"
-                    className="hover:text-blue-500 transition-colors"
+                    href="mailto:teamprajitrong@gmail.com"
+                    className="hover:text-primary transition-colors"
                   >
-                    info@ngo.org
+                    teamprajitrong@gmail.com
                   </a>
+                </li>
+                <li className="text-xs text-gray-500">
+                  📞 Call/WhatsApp preferred
+                  <br />
+                  🕙 10 AM - 7 PM (Mon-Sat)
                 </li>
                 <li>
                   <Link
                     to="/contact"
-                    className="hover:text-blue-500 transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -348,27 +347,28 @@ export default function Layout({ children }: LayoutProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm text-gray-400">
               <div>
                 <p className="font-semibold text-white mb-1">
-                  Organization Details
+                  📍 Quick Contact
                 </p>
                 <p>
-                  Registration No: HCF/2010/12345 | PAN: AABCT5050D | 80G:
-                  80G/2010/12345
+                  Prajit Rong | 📞 Call/WhatsApp | 🕙 10 AM - 7 PM (Mon-Sat) |
+                  📧 teamprajitrong@gmail.com
                 </p>
               </div>
               <div>
                 <p className="font-semibold text-white mb-1">
-                  Legal Disclaimer
+                  Mission & Values
                 </p>
                 <p>
-                  Donations are voluntary and non-refundable. All contributions
-                  are utilized transparently and accounted for.
+                  Providing accessible, inclusive mental health support without
+                  financial barriers. Committed to ethics, transparency, and
+                  measurable impact.
                 </p>
               </div>
             </div>
             <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
               <p>
-                &copy; 2024 Soul Link Foundation. All rights reserved. | Mental
-                Health & Healthcare Services
+                &copy; 2024 SoulLink Foundation. All rights reserved. |
+                Advancing Mental Well-Being Globally
               </p>
             </div>
           </div>

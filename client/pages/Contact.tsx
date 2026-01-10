@@ -26,7 +26,7 @@ export default function Contact() {
     e.preventDefault();
     console.log("Contact form:", formData);
     alert(
-      "Thank you for contacting us! We'll get back to you within 24 hours.",
+      "Thank you for reaching out! We'll respond to your message as soon as possible during office hours (Mon-Sat, 10 AM - 7 PM). For urgent matters, please call or WhatsApp directly.",
     );
     setFormData({
       name: "",
@@ -42,10 +42,11 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Have questions or need support? We're here to help. Reach out to us
-            anytime.
+            📞 Thank you for contacting Prajit Rong at SoulLink Foundation.
+            Calls are preferred for more effective communication and better
+            understanding of your needs.
           </p>
         </div>
       </section>
@@ -54,22 +55,19 @@ export default function Contact() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Address */}
+            {/* Contact Person */}
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 <MapPin className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Address
+                Contact Person
               </h3>
+              <p className="text-gray-600 text-sm font-semibold">Prajit Rong</p>
               <p className="text-gray-600 text-sm">
-                Healthcare Foundation
+                SoulLink Foundation
                 <br />
-                123 Medical Street
-                <br />
-                Kolkata, West Bengal 700001
-                <br />
-                India
+                Mental Health & Wellness
               </p>
             </div>
 
@@ -82,20 +80,10 @@ export default function Contact() {
                 Phone
               </h3>
               <p className="text-gray-600 text-sm mb-2">
-                <a
-                  href="tel:+919876543210"
-                  className="hover:text-primary transition-colors"
-                >
-                  +91 98765 43210
-                </a>
-              </p>
-              <p className="text-gray-600 text-sm">
-                <a
-                  href="tel:+919123456789"
-                  className="hover:text-primary transition-colors"
-                >
-                  +91 91234 56789
-                </a>
+                <span className="font-semibold block text-primary">
+                  WhatsApp or Call
+                </span>
+                <span className="text-xs text-gray-500">(Calls Preferred)</span>
               </p>
             </div>
 
@@ -107,22 +95,15 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Email
               </h3>
-              <p className="text-gray-600 text-sm mb-1">
-                <a
-                  href="mailto:info@healthcarefoundation.org"
-                  className="hover:text-primary transition-colors"
-                >
-                  info@healthcarefoundation.org
-                </a>
-              </p>
               <p className="text-gray-600 text-sm">
                 <a
-                  href="mailto:support@healthcarefoundation.org"
+                  href="mailto:teamprajitrong@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  support@healthcarefoundation.org
+                  teamprajitrong@gmail.com
                 </a>
               </p>
+              <p className="text-gray-600 text-xs mt-2">For urgent matters</p>
             </div>
 
             {/* Office Hours */}
@@ -134,49 +115,90 @@ export default function Contact() {
                 Hours
               </h3>
               <p className="text-gray-600 text-sm">
-                Monday - Friday
+                Monday - Saturday
                 <br />
-                9:00 AM - 6:00 PM
+                10:00 AM - 7:00 PM
                 <br />
-                Saturday
-                <br />
-                10:00 AM - 4:00 PM
+                <span className="text-xs text-gray-500">IST</span>
               </p>
             </div>
           </div>
 
-          {/* 24/7 Crisis Support */}
-          <div className="bg-gradient-to-r from-red-50 to-pink-50 p-8 rounded-lg border-l-4 border-secondary">
+          {/* Contact Notice */}
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-lg border-l-4 border-secondary">
             <h3 className="text-xl font-bold text-gray-900 mb-2">
-              🆘 24/7 Crisis Support Helpline
+              📞 How to Reach Us
             </h3>
             <p className="text-gray-700 mb-3">
-              If you or someone you know is experiencing a mental health crisis,
-              please reach out immediately:
+              We prefer phone calls for more effective communication and to
+              better understand your needs.
             </p>
-            <div className="text-2xl font-bold text-secondary mb-2">
-              +91 XXXX 987 654
-            </div>
-            <p className="text-gray-600 text-sm">
-              Available 24 hours a day, 7 days a week. Free and confidential
-              support.
+            <ul className="text-gray-700 space-y-2 text-sm">
+              <li>
+                ✓ <strong>Preferred Method:</strong> Direct call or WhatsApp
+              </li>
+              <li>
+                ✓ <strong>Call Hours:</strong> 10:00 AM – 7:00 PM, Monday to
+                Saturday
+              </li>
+              <li>
+                ✓ <strong>For Urgent Matters:</strong> Email
+                teamprajitrong@gmail.com
+              </li>
+              <li>
+                ✓ <strong>Response Time:</strong> We respond as soon as possible
+              </li>
+            </ul>
+            <p className="text-gray-600 text-sm mt-4">
+              Thank you for your patience and for reaching out to SoulLink
+              Foundation.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-12 md:py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-lg overflow-hidden shadow-lg h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5503799999998!2d88.37!3d22.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM0JzEyLjAiTiA4OMKwMjInMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            />
+      {/* Quick Contact Actions */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Quick Contact Methods
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500 text-center"
+            >
+              <div className="text-4xl font-bold text-green-500 mb-3">💬</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                WhatsApp
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Quick and convenient communication
+              </p>
+              <p className="text-primary font-semibold text-sm">
+                Available during office hours
+              </p>
+            </a>
+
+            {/* Direct Call */}
+            <a
+              href="tel:+919876543210"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary text-center"
+            >
+              <div className="text-4xl font-bold text-primary mb-3">📞</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Direct Call
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Preferred method for effective communication
+              </p>
+              <p className="text-primary font-semibold text-sm">
+                10:00 AM - 7:00 PM (Mon-Sat)
+              </p>
+            </a>
           </div>
         </div>
       </section>
@@ -292,7 +314,8 @@ export default function Contact() {
             </div>
 
             <p className="text-center text-sm text-gray-600 pt-4 border-t border-gray-300">
-              We typically respond within 24 hours during business days.
+              We typically respond as soon as possible during our office hours:
+              Monday - Saturday, 10:00 AM - 7:00 PM.
             </p>
           </form>
         </div>
@@ -308,20 +331,24 @@ export default function Contact() {
           <div className="space-y-6">
             {[
               {
-                q: "How can I access your counseling services?",
-                a: "You can reach out via phone, email, or fill out our contact form. Our team will schedule an appointment or consultation based on your needs.",
+                q: "What's the best way to contact you?",
+                a: "We prefer phone calls (WhatsApp or regular call) as they allow us to better understand your needs and provide more effective support. You can reach us during 10:00 AM - 7:00 PM, Monday to Saturday.",
               },
               {
-                q: "What if I need urgent mental health support?",
-                a: "Please call our 24/7 crisis helpline at +91 XXXX 987 654. Our trained counselors are available round the clock for emergencies.",
+                q: "Can I reach you outside of office hours?",
+                a: "For urgent matters outside our regular hours, please send an email to teamprajitrong@gmail.com. We'll respond as soon as possible.",
               },
               {
-                q: "Do you provide online counseling?",
-                a: "Yes, we offer both in-person and online counseling sessions through secure video platforms. Contact us to book your session.",
+                q: "What services does SoulLink Foundation provide?",
+                a: "We provide comprehensive mental health services including psychological counseling, cognitive development programs, crisis support, resilience building, and community-based mental health initiatives.",
               },
               {
-                q: "What is your cancellation policy?",
-                a: "Cancellations made 24 hours in advance are free. Late cancellations may incur charges. Contact us for details.",
+                q: "How do I schedule a consultation?",
+                a: "Simply call or WhatsApp us during office hours. Our team will discuss your needs and schedule an appointment at a convenient time.",
+              },
+              {
+                q: "Do you offer online counseling?",
+                a: "Yes, we offer both in-person and online counseling sessions. Discuss your preference when you contact us.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
