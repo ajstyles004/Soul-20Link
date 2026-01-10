@@ -78,7 +78,7 @@ export default function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md">
                   <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div className="hidden sm:block">
