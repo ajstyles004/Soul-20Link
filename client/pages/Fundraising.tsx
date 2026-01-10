@@ -9,6 +9,10 @@ import {
   Building2,
   CheckCircle,
   Shield,
+  Globe2,
+  Lightbulb,
+  BarChart3,
+  Award,
 } from "lucide-react";
 
 export default function Fundraising() {
