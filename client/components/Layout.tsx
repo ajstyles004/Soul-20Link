@@ -37,16 +37,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="scroll-text-container flex-1 min-w-0">
             <div className="scroll-text inline-block">
               <span>
-                Soul Link is registered under sections 12A & 80G of the Income
-                Tax Act, 1961 and CSR-1 registered under the Ministry of
-                Corporate Affairs for undertaking CSR activities.{" "}
-                <Link
-                  to="/certificates"
-                  className="font-semibold underline hover:no-underline"
-                >
-                  click here
-                </Link>{" "}
-                to visit all certificates
+                📞 Thank you for contacting Prajit Rong  |  Calls/WhatsApp Preferred  |  📅 Mon-Sat, 10 AM - 7 PM  |  📧 teamprajitrong@gmail.com  |  Soul Link Foundation - Advancing Mental Well-Being Globally
               </span>
             </div>
           </div>
