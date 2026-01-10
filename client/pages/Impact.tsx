@@ -8,6 +8,7 @@ import {
   Target,
   Award,
   Lightbulb,
+  Heart,
 } from "lucide-react";
 
 export default function Impact() {
