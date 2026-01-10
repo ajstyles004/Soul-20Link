@@ -54,18 +54,19 @@ export default function Layout({ children }: LayoutProps) {
           {/* Contact Info - Static on desktop, hidden on mobile */}
           <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-primary/50">
             <a
-              href="tel:+911140538140"
+              href="https://wa.me/919876543210"
               className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
+              title="WhatsApp or Call"
             >
               <Phone className="w-4 h-4" />
-              011-40538140
+              Call/WhatsApp
             </a>
             <a
-              href="mailto:info@ngo.org"
+              href="mailto:teamprajitrong@gmail.com"
               className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
             >
               <Mail className="w-4 h-4" />
-              info@ngo.org
+              teamprajitrong@gmail.com
             </a>
           </div>
         </div>
