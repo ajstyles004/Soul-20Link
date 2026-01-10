@@ -52,7 +52,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           {/* Contact Info - Static on desktop, hidden on mobile */}
-          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-blue-500">
+          <div className="hidden sm:flex gap-6 text-xs flex-shrink-0 pl-4 border-l border-primary/50">
             <a
               href="tel:+911140538140"
               className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap"
