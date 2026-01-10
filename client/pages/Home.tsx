@@ -72,14 +72,14 @@ export default function Home() {
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link
-                  to="/about"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded transition-colors inline-flex items-center gap-2"
+                  to="/services"
+                  className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded transition-colors inline-flex items-center gap-2"
                 >
                   Learn More <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded transition-colors"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded transition-colors"
                 >
                   Contact Us
                 </Link>
