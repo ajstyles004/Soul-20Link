@@ -21,16 +21,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 176 100% 42%;
+    --primary: 216 100% 32%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 326 100% 54%;
+    --secondary: 162 82% 52%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 176 100% 42%;
+    --accent: 162 82% 52%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,7 +38,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 176 100% 42%;
+    --ring: 216 100% 32%;
 
     --radius: 0.5rem;
 
@@ -46,7 +46,7 @@
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 176 100% 42%;
+    --sidebar-primary: 216 100% 32%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
@@ -58,11 +58,10 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Healthcare-specific colors */
-    --health-teal: 176 100% 42%;
-    --health-pink: 326 100% 54%;
-    --health-light-teal: 179 97% 82%;
-    --health-light-pink: 326 100% 92%;
+    /* SoulLink Foundation colors */
+    --soullink-dark-blue: 216 100% 32%;
+    --soullink-teal: 162 82% 52%;
+    --soullink-light-teal: 162 82% 82%;
   }
 
   .dark {
