@@ -26,7 +26,7 @@ export default function Contact() {
     e.preventDefault();
     console.log("Contact form:", formData);
     alert(
-      "Thank you for contacting us! We'll get back to you within 24 hours.",
+      "Thank you for reaching out! We'll respond to your message as soon as possible during office hours (Mon-Sat, 10 AM - 7 PM). For urgent matters, please call or WhatsApp directly.",
     );
     setFormData({
       name: "",
