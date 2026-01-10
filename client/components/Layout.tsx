@@ -36,11 +36,18 @@ export default function Layout({ children }: LayoutProps) {
           {/* Scrolling Text */}
           <div className="scroll-text-container flex-1 min-w-0">
             <div className="scroll-text inline-block">
-              <span>
-                📞 Thank you for contacting Prajit Rong | Calls/WhatsApp
-                Preferred | 📅 Mon-Sat, 10 AM - 7 PM | 📧
-                teamprajitrong@gmail.com | Soul Link Foundation - Advancing
-                Mental Well-Being Globally
+              <span style={{ fontFamily: "'Times New Roman', serif" }}>
+                Soul Link is registered under sections 12A &amp; 80G of the
+                Income Tax Act, 1961 and CSR-1 registered under the Ministry of
+                Health &amp; Education.{" "}
+                <Link
+                  to="/certificates"
+                  className="underline hover:opacity-80 transition-opacity font-semibold"
+                  style={{ fontFamily: "'Times New Roman', serif" }}
+                >
+                  click here
+                </Link>{" "}
+                to view the certificates
               </span>
             </div>
           </div>
@@ -69,22 +76,14 @@ export default function Layout({ children }: LayoutProps) {
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center py-3">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md">
-                  <Heart className="w-7 h-7 text-white" />
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-xl font-bold text-gray-900">
-                    Soul Link
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium">
-                    Mental Health & Wellness
-                  </div>
-                </div>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
+                alt="SoulLink Foundation Logo"
+                className="h-16 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
