@@ -448,14 +448,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <Link
               to="/donate"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               <Heart className="w-5 h-5" />
               Make a Donation
             </Link>
             <Link
-              to="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
+              to="/fundraising"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded transition-colors inline-flex items-center justify-center gap-2"
             >
               Get Involved <ArrowRight className="w-5 h-5" />
             </Link>
