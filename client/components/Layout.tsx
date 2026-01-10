@@ -319,20 +319,21 @@ export default function Layout({ children }: LayoutProps) {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a
-                    href="tel:+911140538140"
-                    className="hover:text-primary transition-colors"
-                  >
-                    011-40538140
-                  </a>
+                  <p className="hover:text-primary transition-colors">
+                    Prajit Rong
+                  </p>
                 </li>
                 <li>
                   <a
-                    href="mailto:info@ngo.org"
+                    href="mailto:teamprajitrong@gmail.com"
                     className="hover:text-primary transition-colors"
                   >
-                    info@ngo.org
+                    teamprajitrong@gmail.com
                   </a>
+                </li>
+                <li className="text-xs text-gray-500">
+                  📞 Call/WhatsApp preferred<br/>
+                  🕙 10 AM - 7 PM (Mon-Sat)
                 </li>
                 <li>
                   <Link
