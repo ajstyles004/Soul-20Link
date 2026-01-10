@@ -72,19 +72,11 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md">
-                  <Heart className="w-7 h-7 text-white" />
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-xl font-bold text-gray-900">
-                    Soul Link
-                  </div>
-                  <div className="text-xs text-gray-600 font-medium">
-                    Mental Health & Wellness
-                  </div>
-                </div>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
+                alt="SoulLink Foundation Logo"
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
