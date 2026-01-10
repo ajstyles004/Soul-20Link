@@ -171,12 +171,18 @@ export default function ImpactSection() {
             to every corner of India. Your support matters.
           </p>
           <div className="inline-flex gap-4 flex-wrap justify-center">
-            <button className="px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-blue-50 transition-colors transform hover:scale-105 duration-300">
+            <Link
+              to="/about"
+              className="px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-blue-50 transition-colors transform hover:scale-105 duration-300 inline-block"
+            >
               Learn More
-            </button>
-            <button className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+            </Link>
+            <Link
+              to="/get-involved"
+              className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-block"
+            >
               Get Involved
-            </button>
+            </Link>
           </div>
         </div>
       </div>
