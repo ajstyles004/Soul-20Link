@@ -204,7 +204,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Twitter"
                 >
                   <svg
@@ -217,7 +217,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 hover:text-primary transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
