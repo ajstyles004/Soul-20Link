@@ -75,7 +75,7 @@ export default function Layout({ children }: LayoutProps) {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
                 alt="SoulLink Foundation Logo"
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
 
