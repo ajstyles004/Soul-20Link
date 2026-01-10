@@ -139,7 +139,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block py-2 text-gray-700 hover:text-red-600 font-medium transition-colors"
+                  className="block py-2 text-gray-700 hover:text-primary font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
