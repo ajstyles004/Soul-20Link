@@ -422,7 +422,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded transition-colors"
+              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-8 rounded transition-colors"
             >
               View Full Gallery <ArrowRight className="w-4 h-4" />
             </Link>
