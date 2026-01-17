@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import ImpactSection from "../components/ImpactSection";
+import { useQuery } from "@tanstack/react-query";
+import { Post } from "@shared/schema";
+
 import {
   ArrowRight,
   Heart,
@@ -12,44 +15,15 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const galleryImages = [
-    {
-      id: 1,
-      title: "Mental Health Awareness Workshop",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+
+  const { data: galleryItems } = useQuery<Post[]>({
+    queryKey: ["posts", "gallery"],
+    queryFn: async () => {
+      const res = await fetch("/api/posts?type=gallery");
+      if (!res.ok) return [];
+      return res.json();
     },
-    {
-      id: 2,
-      title: "Community Counseling Session",
-      image:
-        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
-    },
-    {
-      id: 3,
-      title: "Healthcare Camp",
-      image:
-        "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop",
-    },
-    {
-      id: 4,
-      title: "Stress Management Training",
-      image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
-    },
-    {
-      id: 5,
-      title: "Team Meeting",
-      image:
-        "https://images.unsplash.com/photo-1552821206-7eb0d89a4b3d?w=400&h=300&fit=crop",
-    },
-    {
-      id: 6,
-      title: "Group Therapy Session",
-      image:
-        "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
-    },
-  ];
+  });
 
   return (
     <Layout>
@@ -84,6 +58,7 @@ export default function Home() {
                 >
                   Contact Us
                 </Link>
+
               </div>
             </div>
 
@@ -375,23 +350,38 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {galleryImages.map((image) => (
-              <div
-                key={image.id}
-                className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="relative h-48 overflow-hidden bg-gray-200">
-                  <img
-                    src={image.image}
-                    alt={image.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+            {!galleryItems || galleryItems.length === 0 ? (
+              // Fallback static images if no dynamic content
+              [
+                "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=400&h=300&fit=crop",
+                "https://images.unsplash.com/photo-1631217314831-c6227db76b6e?w=400&h=300&fit=crop"
+              ].map((src, i) => (
+                <div key={i} className="rounded-lg overflow-hidden shadow-md">
+                  <div className="relative h-48 overflow-hidden bg-gray-200">
+                    <img src={src} className="w-full h-full object-cover" alt="Gallery item" />
+                  </div>
                 </div>
-                <div className="p-4 bg-white">
-                  <h3 className="font-semibold text-gray-900">{image.title}</h3>
+              ))
+            ) : (
+              galleryItems.slice(0, 6).map((image) => (
+                <div
+                  key={image.id}
+                  className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative h-48 overflow-hidden bg-gray-200">
+                    <img
+                      src={image.imageUrl || "https://placehold.co/600x400"}
+                      alt={image.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="font-semibold text-gray-900 line-clamp-1">{image.title}</h3>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
 
           <div className="text-center">

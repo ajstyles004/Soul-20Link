@@ -11,6 +11,7 @@ import {
   Mail,
 } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/hooks/use-auth";
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,6 +19,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, logoutMutation } = useAuth();
 
   const navLinks = [
     { label: "About Us", href: "/about" },
@@ -25,7 +27,9 @@ export default function Layout({ children }: LayoutProps) {
     { label: "Impact", href: "/impact" },
     { label: "Partnership", href: "/fundraising" },
     { label: "Get Involved", href: "/donate" },
-    { label: "Resources", href: "/gallery" },
+    { label: "News", href: "/news" },
+    { label: "Blogs", href: "/blogs" },
+    { label: "Gallery", href: "/gallery" },
   ];
 
   return (
@@ -69,6 +73,21 @@ export default function Layout({ children }: LayoutProps) {
               <Mail className="w-4 h-4" />
               teamprajitrong@gmail.com
             </a>
+            {user ? (
+              <button
+                onClick={() => logoutMutation.mutate()}
+                className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap font-bold text-yellow-300"
+              >
+                Logout ({user.username})
+              </button>
+            ) : (
+              <Link
+                to="/auth"
+                className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap font-semibold"
+              >
+                Admin Login
+              </Link>
+            )}
           </div>
         </div>
       </div>
