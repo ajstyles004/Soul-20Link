@@ -30,13 +30,6 @@ export default function Blogs() {
                             Insights, stories, and updates from our team and community.
                         </p>
                     </div>
-                    {user && (
-                        <Button asChild variant="secondary" size="lg">
-                            <Link to="/post/new" className="gap-2">
-                                <Plus className="w-5 h-5" /> Post Blog
-                            </Link>
-                        </Button>
-                    )}
                 </div>
             </section>
 
@@ -72,7 +65,6 @@ export default function Blogs() {
                                                     {post.createdAt ? format(new Date(post.createdAt), 'MMM d, yyyy') : 'Recent'}
                                                 </span>
                                             </div>
-                                            <AdminActionButtons postId={post.id} />
                                         </div>
                                         <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                                             {post.title}

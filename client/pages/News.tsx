@@ -45,13 +45,6 @@ export default function News() {
                 Stay informed about our latest initiatives, research, and impact stories
               </p>
             </div>
-            {user && (
-              <Button asChild variant="secondary" size="lg">
-                <Link to="/post/new" className="gap-2">
-                  <Plus className="w-5 h-5" /> Post News
-                </Link>
-              </Button>
-            )}
           </div>
         </div>
       </section>
@@ -115,7 +108,6 @@ export default function News() {
                         <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full capitalize">
                           {news.type}
                         </span>
-                        <AdminActionButtons postId={news.id} />
                       </div>
                       <span className="text-gray-500 text-sm flex items-center gap-1">
                         <Calendar className="w-4 h-4" />

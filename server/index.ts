@@ -11,6 +11,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import { handleDemo } from "./routes/demo";
 import { getPosts, getPostById, createPost, updatePost, deletePost } from "./routes/posts";
+import { getEvents, createEvent, deleteEvent, getEvent, updateEvent } from "./routes/events";
+import { getMembers, createMember, deleteMember, updateMember } from "./routes/members";
+import { getProgrammes, createProgramme, deleteProgramme, updateProgramme } from "./routes/programmes";
+import { getStats } from "./routes/stats";
+import { donationsRouter } from "./routes/donations";
+import { contactRouter } from "./routes/contact";
+import { usersRouter } from "./routes/users";
+import { uploadRouter } from "./routes/upload";
 
 import { setupAuth } from "./auth";
 
@@ -25,32 +33,8 @@ export function createServer() {
   // Serve uploads statically
   app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
-  // Multer config
-  const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      const uploadDir = path.join(__dirname, "../uploads");
-      if (!fs.existsSync(uploadDir)) {
-        fs.mkdirSync(uploadDir);
-      }
-      cb(null, uploadDir);
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-      cb(null, uniqueSuffix + path.extname(file.originalname));
-    }
-  });
-
-  const upload = multer({ storage: storage });
-
-  // Upload route
-  app.post("/api/upload", upload.single('file'), (req, res) => {
-    if (!req.file) {
-      return res.status(400).json({ message: "No file uploaded" });
-    }
-    // Return relative path that can be used with the static middleware
-    const fileUrl = `/uploads/${req.file.filename}`;
-    res.json({ url: fileUrl });
-  });
+  // Upload Route
+  app.use("/api/upload", uploadRouter);
 
   setupAuth(app);
 
@@ -67,7 +51,35 @@ export function createServer() {
   app.get("/api/posts/:id", getPostById);
   app.post("/api/posts", createPost);
   app.patch("/api/posts/:id", updatePost);
+  app.patch("/api/posts/:id", updatePost);
   app.delete("/api/posts/:id", deletePost);
+
+  // Event routes
+  app.get("/api/events", getEvents);
+  app.post("/api/events", createEvent);
+  app.get("/api/events/:id", getEvent);
+  app.patch("/api/events/:id", updateEvent);
+  app.delete("/api/events/:id", deleteEvent);
+
+  // Member Routes
+  app.get("/api/members", getMembers);
+  app.post("/api/members", createMember);
+  app.patch("/api/members/:id", updateMember);
+  app.delete("/api/members/:id", deleteMember);
+
+  // Programme Routes
+  app.get("/api/programmes", getProgrammes);
+  app.post("/api/programmes", createProgramme);
+  app.patch("/api/programmes/:id", updateProgramme);
+  app.delete("/api/programmes/:id", deleteProgramme);
+
+  // Stats
+  app.get("/api/stats", getStats);
+
+  // New Admin Routes
+  app.use("/api/donations", donationsRouter);
+  app.use("/api/contact", contactRouter);
+  app.use("/api/users", usersRouter);
 
   return app;
 }

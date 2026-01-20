@@ -5,23 +5,26 @@ Soul Link Foundation is a full-stack web application dedicated to providing comp
 ## Features
 
 ### Public Portal
-- **Home**: Overview of the mission, impact, and latest updates.
-- **Resource Center**:
-    - **News**: Latest press releases and coverage.
-    - **Blogs**: insightful articles on mental health.
-    - **Gallery**: Visual stories of impact and events.
-- **Services**: Detailed information about counseling and healthcare programs.
-- **Impact**: Statistics and stories of change.
-- **Team**: Meet the dedicated professionals behind the cause.
-- **Contact**: Easy ways to get in touch or request support.
+- **Home**: Dynamic slideshow, impact summary, and featured content.
+- **Programmes & Events**:
+    - **Services**: Detailed information about mental health and healthcare programs.
+    - **Events**: Upcoming workshops and community activities.
+- **Resources**:
+    - **News & Blogs**: Latest updates and insightful articles.
+    - **Gallery**: Visual journey of the foundation's work.
+    - **Certificates**: Transparency with legal registrations (12A, 80G, CSR-1).
+- **Get Involved**:
+    - **Donate**: Secure gateay for contributions.
+    - **Contact**: Direct lines for support and inquiries.
 
 ### Admin Portal
-- **Secure Authentication**: Protected login for administrators.
+- **Dashboard**: Real-time overview of key metrics (Donations, Messages, Active Users).
 - **Content Management System (CMS)**:
-    - **Create**: Post new updates to News, Blogs, and Gallery.
-    - **Edit**: Update existing content and images.
-    - **Delete**: Remove outdated or incorrect posts.
-- **Image Upload**: Integrated file upload for post images.
+    - **News & Blogs**: Full editor for publishing articles.
+    - **Events Management**: Create, edit, and schedule events with location details.
+    - **Gallery Manager**: Centralized upload and management of visual assets.
+- **Secure Authentication**: Protected routes and role-based access.
+- **Image Upload**: Local file upload support for all media content.
 
 ## Tech Stack
 

@@ -1,15 +1,9 @@
 import Layout from "../components/Layout";
 import { useQuery } from "@tanstack/react-query";
 import { Post } from "@shared/schema";
-import { useAuth } from "@/hooks/use-auth";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Plus, Loader2 } from "lucide-react";
-import AdminActionButtons from "../components/AdminActionButtons";
+import { Loader2 } from "lucide-react";
 
 export default function Gallery() {
-  const { user } = useAuth();
-
   const { data: posts, isLoading } = useQuery<Post[]>({
     queryKey: ["posts", "gallery"],
     queryFn: async () => {
@@ -33,13 +27,6 @@ export default function Gallery() {
                 Visual stories of transformation, community engagement, and the lives we've touched.
               </p>
             </div>
-            {user && (
-              <Button asChild variant="secondary" size="lg">
-                <Link to="/post/new" className="gap-2">
-                  <Plus className="w-5 h-5" /> Add Photo
-                </Link>
-              </Button>
-            )}
           </div>
         </div>
       </section>
@@ -75,9 +62,6 @@ export default function Gallery() {
                           <p className="text-white/90 text-sm">
                             {item.content}
                           </p>
-                        </div>
-                        <div className="mb-2">
-                          <AdminActionButtons postId={item.id} />
                         </div>
                       </div>
                     </div>

@@ -9,9 +9,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
+import Programmes from "./pages/Programmes";
 import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import Blogs from "./pages/Blogs";
+import Events from "./pages/Events";
+import EventEditor from "./pages/EventEditor";
+import EventDetails from "./pages/EventDetails";
 import Certificates from "./pages/Certificates";
 import Donation from "./pages/Donation";
 import Contact from "./pages/Contact";
@@ -45,9 +49,11 @@ const App = () => (
             <Route path="/auth" element={<Login />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/programmes" element={<Programmes />} />
             <Route path="/news" element={<News />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/donate" element={<Donation />} />
             <Route path="/contact" element={<Contact />} />
@@ -59,6 +65,9 @@ const App = () => (
             <Route path="/admin" element={<AdminRoute component={Admin} />} />
             <Route path="/post/new" element={<AdminRoute component={PostEditor} />} />
             <Route path="/post/edit/:id" element={<AdminRoute component={PostEditor} />} />
+            <Route path="/events/new" element={<AdminRoute component={EventEditor} />} />
+            <Route path="/events/edit/:id" element={<AdminRoute component={EventEditor} />} />
+            <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/post/:id" element={<PostDetails />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -1,17 +1,36 @@
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { ReactNode, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   Menu,
   X,
   Heart,
-  Search,
+
   MessageCircle,
   HelpCircle,
   Phone,
   Mail,
 } from "lucide-react";
-import { useState } from "react";
 import { useAuth } from "@/hooks/use-auth";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
+import React from "react";
+import { User as UserIcon, LayoutDashboard, LogOut } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -20,22 +39,48 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, logoutMutation } = useAuth();
+  const location = useLocation();
 
-  const navLinks = [
-    { label: "About Us", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Impact", href: "/impact" },
-    { label: "Partnership", href: "/fundraising" },
-    { label: "Get Involved", href: "/donate" },
-    { label: "News", href: "/news" },
-    { label: "Blogs", href: "/blogs" },
-    { label: "Gallery", href: "/gallery" },
+  const navGroups = [
+    {
+      title: "WHO WE ARE",
+      items: [
+        { label: "About Us", href: "/about", description: "Our story, mission, and vision." },
+        { label: "Our Team", href: "/team", description: "Meet the dedicated people behind our mission." },
+        { label: "Impact", href: "/impact", description: "See the change we are making together." },
+        { label: "Certificates", href: "/certificates", description: "Our legal registrations and certifications." },
+      ],
+    },
+    {
+      title: "OUR PROGRAMMES",
+      items: [
+        { label: "Programmes", href: "/programmes", description: "Our core initiatives and projects." },
+        { label: "Services", href: "/services", description: "Services we offer to the community." },
+        { label: "Events", href: "/events", description: "Upcoming and past events." },
+      ],
+    },
+    {
+      title: "RESOURCES",
+      items: [
+        { label: "News", href: "/news", description: "Latest updates and press releases." },
+        { label: "Blogs", href: "/blogs", description: "Articles and insights on mental health." },
+        { label: "Gallery", href: "/gallery", description: "Visual stories from our activities." },
+      ],
+    },
+    {
+      title: "GET INVOLVED",
+      items: [
+        { label: "Donate", href: "/donate", description: "Support our cause financially." },
+        { label: "Partnership", href: "/fundraising", description: "Collaborate with us." },
+        { label: "Contact Us", href: "/contact", description: "Get in touch with our team." },
+      ],
+    }
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Top Blue Header Bar with Scrolling Text */}
-      <div className="bg-primary text-white py-2 overflow-hidden">
+      <div className="bg-primary text-white py-1 text-xs overflow-hidden">
         <div className="flex items-center gap-6">
           {/* Scrolling Text */}
           <div className="scroll-text-container flex-1 min-w-0">
@@ -73,95 +118,167 @@ export default function Layout({ children }: LayoutProps) {
               <Mail className="w-4 h-4" />
               teamprajitrong@gmail.com
             </a>
-            {user ? (
-              <button
-                onClick={() => logoutMutation.mutate()}
-                className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap font-bold text-yellow-300"
-              >
-                Logout ({user.username})
-              </button>
-            ) : (
-              <Link
-                to="/auth"
-                className="flex items-center gap-1 hover:opacity-90 transition-opacity whitespace-nowrap font-semibold"
-              >
-                Admin Login
-              </Link>
-            )}
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-3">
-            {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
-                alt="SoulLink Foundation Logo"
-                className="h-16 w-auto"
-              />
-            </Link>
+          <div className="flex justify-between items-center h-20">
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-gray-700 hover:text-primary font-medium transition-colors text-sm"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Right Section */}
-            <div className="flex items-center gap-3">
-              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                <Search className="w-5 h-5 text-gray-700" />
+            {/* Left: Hamburger + Logo */}
+            <div className="flex items-center gap-4">
+              {/* Hamburger Button */}
+              <button
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none lg:hidden"
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <Menu className="w-6 h-6 text-gray-700" />
               </button>
+
+              <Link to="/" className="flex-shrink-0 flex items-center group">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
+                  alt="SoulLink"
+                  className="h-20 w-auto group-hover:scale-105 transition-transform opacity-90 mix-blend-multiply"
+                />
+              </Link>
+            </div>
+
+            {/* Center: Desktop Navigation (Mega Menu) */}
+            <div className="hidden lg:block flex-1 px-8">
+              <NavigationMenu className="mx-auto">
+                <NavigationMenuList>
+                  {navGroups.map((group) => (
+                    <NavigationMenuItem key={group.title}>
+                      <NavigationMenuTrigger className="bg-transparent text-sm font-bold text-gray-700 hover:text-primary uppercase tracking-wide">
+                        {group.title}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
+                          {group.items.map((item) => (
+                            <ListItem key={item.href} title={item.label} href={item.href}>
+                              {item.description}
+                            </ListItem>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            {/* Right: Donate Button & Admin Menu */}
+            <div className="flex items-center gap-3">
+
               <Link
                 to="/donate"
-                className="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 sm:px-6 rounded transition-colors text-sm"
+                className="hidden sm:inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold py-2.5 px-6 rounded shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 uppercase tracking-wide text-sm"
               >
-                Donate Now
+                <Heart className="w-4 h-4 mr-2 text-red-600 fill-current" />
+                Donate
               </Link>
 
-              {/* Mobile Menu Button */}
-              <button
-                className="md:hidden p-2"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-700" />
-                ) : (
-                  <Menu className="w-6 h-6 text-gray-700" />
-                )}
-              </button>
+              {/* Admin / User Menu */}
+              {user ? (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                        <UserIcon className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="hidden md:inline-block font-semibold text-sm text-gray-700">Account</span>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-48 bg-white">
+                    <DropdownMenuLabel>My Account ({user.username})</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild>
+                      <Link to="/admin" className="cursor-pointer w-full flex items-center">
+                        <LayoutDashboard className="w-4 h-4 mr-2" />
+                        Admin Panel
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      className="text-red-600 cursor-pointer focus:text-red-600 focus:bg-red-50"
+                      onClick={() => logoutMutation.mutate()}
+                    >
+                      <LogOut className="w-4 h-4 mr-2" />
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  to="/auth"
+                  className="hidden sm:inline-flex items-center justify-center text-sm font-bold text-gray-700 hover:text-primary uppercase tracking-wide transition-colors"
+                >
+                  Admin Login
+                </Link>
+              )}
             </div>
           </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <nav className="md:hidden pb-4 border-t border-gray-100">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="block py-2 text-gray-700 hover:text-primary font-medium transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          )}
         </div>
       </header>
+
+      {/* Mobile/Sidebar Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}>
+          <div
+            className="fixed inset-y-0 left-0 w-80 bg-white shadow-xl p-6 overflow-y-auto transition-transform duration-300 transform translate-x-0"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F2477f586e9364b7a9fa52db217da2d5c%2Fad2084e23846432ebddf5f6d3806dc48?format=webp&width=800"
+                alt="SoulLink"
+                className="h-10 w-auto"
+              />
+              <button onClick={() => setMobileMenuOpen(false)} className="p-2 hover:bg-gray-100 rounded-full">
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <nav className="space-y-8">
+              {navGroups.map((group) => (
+                <div key={group.title}>
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 border-b pb-2">{group.title}</h4>
+                  <ul className="space-y-3 pl-2">
+                    {group.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          to={item.href}
+                          className={cn(
+                            "block text-gray-700 hover:text-primary font-medium transition-colors text-base py-1",
+                            location.pathname === item.href && "text-primary font-bold"
+                          )}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              <div className="pt-6 border-t border-gray-100 space-y-4">
+                {user ? (
+                  <Link to="/admin" className="block w-full text-center py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-700 font-semibold transition-colors">Admin Panel</Link>
+                ) : (
+                  <Link to="/auth" className="block w-full text-center py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-700 font-semibold transition-colors">Admin Login</Link>
+                )}
+                <Link to="/donate" className="block w-full text-center py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded shadow-md uppercase tracking-wider transition-colors">
+                  Donate Now
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-40">
@@ -395,3 +512,30 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { title: string; href: string }
+>(({ className, title, children, href, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          to={href}
+          ref={ref as any}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none text-gray-900 group-hover:text-primary">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
