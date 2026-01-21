@@ -89,10 +89,6 @@ export default function HomeSlideshow({ slides }: HomeSlideshowProps) {
             {/* Content */}
             <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
               <div className="max-w-3xl space-y-8">
-                <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-lg transition-all duration-700 delay-300 transform ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                  {slide.title}
-                </h1>
-
                 {/* Random Quote */}
                 <div className={`border-l-4 border-yellow-400 pl-6 py-2 bg-black/40 backdrop-blur-sm rounded-r-lg max-w-2xl transition-all duration-700 delay-500 transform ${index === currentSlide ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
                   <p className="text-xl md:text-2xl italic text-gray-100 font-serif leading-relaxed">
@@ -102,10 +98,6 @@ export default function HomeSlideshow({ slides }: HomeSlideshowProps) {
                     — {MENTAL_HEALTH_QUOTES[index % MENTAL_HEALTH_QUOTES.length].author}
                   </p>
                 </div>
-
-                <p className={`text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl transition-all duration-700 delay-700 transform ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                  {slide.content}
-                </p>
 
                 <div className={`flex flex-wrap gap-4 pt-4 transition-all duration-700 delay-900 transform ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link to="/donate">
