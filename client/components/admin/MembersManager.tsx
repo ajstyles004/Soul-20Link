@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Member, InsertMember, insertMemberSchema } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Trash2, Plus, User, Mail, Upload, Loader2 } from "lucide-react";
+import { Trash2, Plus, User, Mail, Upload, Loader2, Pencil, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -13,6 +13,7 @@ export default function MembersManager() {
     const { toast } = useToast();
     const queryClient = useQueryClient();
     const [isCreating, setIsCreating] = useState(false);
+    const [editingMember, setEditingMember] = useState<Member | null>(null);
     const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false);
 
@@ -48,12 +49,30 @@ export default function MembersManager() {
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ["members"] });
             toast({ title: "Success", description: "Member added successfully" });
-            setIsCreating(false);
-            setFile(null);
-            form.reset();
+            handleCancel();
         },
         onError: () => {
             toast({ title: "Error", description: "Failed to create member", variant: "destructive" });
+        },
+    });
+
+    const updateMutation = useMutation({
+        mutationFn: async ({ id, data }: { id: number; data: InsertMember }) => {
+            const res = await fetch(`/api/members/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (!res.ok) throw new Error("Failed to update member");
+            return res.json();
+        },
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ["members"] });
+            toast({ title: "Success", description: "Member updated successfully" });
+            handleCancel();
+        },
+        onError: () => {
+            toast({ title: "Error", description: "Failed to update member", variant: "destructive" });
         },
     });
 
@@ -69,6 +88,24 @@ export default function MembersManager() {
             toast({ title: "Success", description: "Member deleted successfully" });
         },
     });
+
+    const handleCancel = () => {
+        setIsCreating(false);
+        setEditingMember(null);
+        setFile(null);
+        form.reset({ name: "", position: "", contact: "", imageUrl: "" });
+    };
+
+    const handleEdit = (member: Member) => {
+        setEditingMember(member);
+        form.reset({
+            name: member.name,
+            position: member.position,
+            contact: member.contact,
+            imageUrl: member.imageUrl || "",
+        });
+        setIsCreating(true);
+    };
 
     const onSubmit = async (data: InsertMember) => {
         if (file) {
@@ -91,21 +128,26 @@ export default function MembersManager() {
             }
             setUploading(false);
         }
-        mutation.mutate(data);
+
+        if (editingMember) {
+            updateMutation.mutate({ id: editingMember.id, data });
+        } else {
+            mutation.mutate(data);
+        }
     };
 
     return (
         <div className="space-y-6">
             <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">Manage Members</h2>
-                <Button onClick={() => setIsCreating(!isCreating)}>
-                    {isCreating ? "Cancel" : <><Plus className="mr-2 h-4 w-4" /> Add Member</>}
+                <Button onClick={isCreating ? handleCancel : () => setIsCreating(true)}>
+                    {isCreating ? <><X className="mr-2 h-4 w-4" /> Cancel</> : <><Plus className="mr-2 h-4 w-4" /> Add Member</>}
                 </Button>
             </div>
 
             {isCreating && (
                 <div className="bg-white p-6 rounded-lg shadow-md border animate-in fade-in slide-in-from-top-4">
-                    <h3 className="text-lg font-semibold mb-4">Add New Team Member</h3>
+                    <h3 className="text-lg font-semibold mb-4">{editingMember ? "Edit Team Member" : "Add New Team Member"}</h3>
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -178,10 +220,10 @@ export default function MembersManager() {
                                 </FormItem>
                             </div>
 
-                            <Button type="submit" disabled={mutation.isPending || uploading}>
-                                {mutation.isPending || uploading ? (
-                                    <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving...</>
-                                ) : "Add Member"}
+                            <Button type="submit" disabled={mutation.isPending || updateMutation.isPending || uploading}>
+                                {mutation.isPending || updateMutation.isPending || uploading ? (
+                                    <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> {editingMember ? "Updating..." : "Saving..."}</>
+                                ) : (editingMember ? "Update Member" : "Add Member")}
                             </Button>
                         </form>
                     </Form>
@@ -208,14 +250,23 @@ export default function MembersManager() {
                                     </div>
                                 </div>
                             </div>
-                            <Button
-                                variant="destructive"
-                                size="icon"
-                                onClick={() => deleteMutation.mutate(member.id)}
-                                disabled={deleteMutation.isPending}
-                            >
-                                <Trash2 className="w-4 h-4" />
-                            </Button>
+                            <div className="flex gap-2">
+                                <Button
+                                    variant="outline"
+                                    size="icon"
+                                    onClick={() => handleEdit(member)}
+                                >
+                                    <Pencil className="w-4 h-4" />
+                                </Button>
+                                <Button
+                                    variant="destructive"
+                                    size="icon"
+                                    onClick={() => deleteMutation.mutate(member.id)}
+                                    disabled={deleteMutation.isPending}
+                                >
+                                    <Trash2 className="w-4 h-4" />
+                                </Button>
+                            </div>
                         </div>
                     ))
                 )}
