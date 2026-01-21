@@ -118,8 +118,8 @@ export default function MembersManager() {
                     body: formData,
                 });
                 if (!res.ok) throw new Error('Upload failed');
-                const { url } = await res.json();
-                data.imageUrl = url;
+                const { imageUrl } = await res.json();
+                data.imageUrl = imageUrl;
             } catch (error) {
                 console.error("Upload error:", error);
                 toast({ title: "Error", description: "Failed to upload image", variant: "destructive" });
