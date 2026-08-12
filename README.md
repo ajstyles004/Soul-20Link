@@ -3,7 +3,7 @@
 SoulLink Foundation is a full-stack web application dedicated to providing comprehensive mental health services and healthcare interventions to underserved communities. This platform serves as the digital presence for the NGO, allowing them to showcase their work, share updates, and connect with the community.
 
 ## Live Demo
-**Production URL:** [https://soul-20link-production.up.railway.app](https://soul-20link-production.up.railway.app) (Example)
+**Production URL:** [https://soul-20link-production.up.railway.app](soul-20link-production-2b67.up.railway.app)
 
 ## Features
 
